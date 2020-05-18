@@ -4,18 +4,18 @@
     name: "{{ item }}"
     state: present
     update_cache: yes
-    with_items:
-      - zsh
-      - tmux
-      - ssh
-      - git
-      - nodejs
-      - npm
-      - ruby
-      - ruby-dev
-      - rubygems
-      - cowsay
-      - neofetch
+  with_items:
+    - zsh
+    - tmux
+    - ssh
+    - git
+    - nodejs
+    - npm
+    - ruby
+    - ruby-dev
+    - rubygems
+    - cowsay
+    - neofetch
 
 - name: Get the dotfiles from the GitHub repo
   git:
