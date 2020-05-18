@@ -1,7 +1,7 @@
 ---
 - name: Install packages
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
     update_cache: yes
     with_items:
@@ -19,8 +19,8 @@
 
 - name: Get the dotfiles from the GitHub repo
   git:
-    repo: {{ dotfiles_repo }}
-    dest: {{ dotfiles_repo_local }}
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_repo_local }}"
 
 # - name: Install cowsay
 #   npm:
