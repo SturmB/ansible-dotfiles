@@ -16,6 +16,7 @@
     - rubygems
     - cowsay
     - neofetch
+  become: yes
 
 - name: Get the dotfiles from the GitHub repo
   git:

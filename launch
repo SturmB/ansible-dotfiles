@@ -35,8 +35,8 @@ fi
 
 if [[ $LIKE == 'debian' ]]; then
     sudo apt update && sudo apt install ansible -y
-    ansible-playbook -i main dotfiles.yml
+    ansible-playbook -K -i main dotfiles.yml
 else
     sudo apt update && sudo apt install ansible -y
-    ansible-playbook -i main dotfiles.yml
+    ansible-playbook -K -i main dotfiles.yml
 fi
