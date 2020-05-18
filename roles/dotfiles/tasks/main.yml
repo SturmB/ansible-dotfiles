@@ -40,15 +40,18 @@
     dest: "~/.oh-my-zsh/custom/themes/powerlevel10k"
     depth: 1
 
+- name: Install lolcat and colorls
+  gem:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - lolcat
+    - colorls
+
 - name: Get the dotfiles from the GitHub repo
   git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local }}"
-
-- name: Install lolcat
-  gem:
-    name: lolcat
-    state: present
 
 - name: Ensure all configured dotfiles are links
   command: "ls -F {{ home }}/{{ item }}"
