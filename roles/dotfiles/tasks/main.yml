@@ -31,7 +31,7 @@
 - name: Install Powerlevel10k
   git:
     repo: "https://github.com/romkatv/powerlevel10k.git"
-    dest: "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k"
+    dest: "~/.oh-my-zsh/custom/themes/powerlevel10k"
     depth: 1
 
 - name: Get the dotfiles from the GitHub repo
