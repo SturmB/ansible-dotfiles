@@ -34,7 +34,9 @@ else
 fi
 
 if [[ $LIKE == 'debian' ]]; then
-  ansible-playbook -i inventory dotfiles.yml
+    sudo apt update && sudo apt install ansible -y
+    ansible-playbook -i main dotfiles.yml
 else
-  ansible-playbook -i inventory dotfiles.yml
+    sudo apt update && sudo apt install ansible -y
+    ansible-playbook -i main dotfiles.yml
 fi
