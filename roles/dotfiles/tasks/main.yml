@@ -22,6 +22,7 @@
   user:
     name: sturm
     shell: /bin/zsh
+  become: yes
 
 - name: Check if oh-my-zsh already exists
   stat:
