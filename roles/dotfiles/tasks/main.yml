@@ -18,6 +18,11 @@
     - neofetch
   become: yes
 
+- name: Set the shell to zsh
+  user:
+    name: sturm
+    shell: /bin/zsh
+
 - name: Check if oh-my-zsh already exists
   stat:
     path: ~/.oh-my-zsh
