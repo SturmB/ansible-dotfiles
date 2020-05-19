@@ -40,6 +40,10 @@
     dest: "~/.oh-my-zsh/custom/themes/powerlevel10k"
     depth: 1
 
+- name: Install rbenv and Ruby
+  shell:
+    cmd: curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+
 - name: Install lolcat and colorls
   gem:
     name: "{{ item }}"
