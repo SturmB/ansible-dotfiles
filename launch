@@ -43,4 +43,5 @@ if [ ! "$(which ansible-playbook)" ]; then
 fi
 
 # Run the dotfiles Ansible Playbook
+ansible-galaxy install -r requirements.yml
 ansible-playbook -K -i main dotfiles.yml

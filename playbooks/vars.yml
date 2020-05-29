@@ -1,0 +1,36 @@
+---
+# misc
+github_access_token: 709f29af957aa7518635e5dbd378b2b19a6d3801
+
+# weareinteractive.users
+users:
+  - username: sturm
+    name: Chris McGee
+    uid: 1000
+    password: $6$somesecretsalthe$xrTgcmmIHNkg9bIsyMm6fDq6W6sCH8.r4J8FWFxPirXFmN61xr6PP7kX.I3dBEEkUyDFoQIfk0mfKaWEgAstD1
+    authorized_keys:
+      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    home_create: yes
+    home_mode: "0750"
+    groups:
+      - admin
+    append: yes
+    ssh_key_generate: yes
+    ssh_key_type: "ed25519"
+    ssh_key_comment: "test@digitalocean"
+    ssh_key_file: .ssh/id_github
+
+# geerlingguy.git
+
+# geerlingguy.dotfiles
+dotfiles_repo: "https://github.com/SturmB/dotfiles.git"
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: "~/.dotfiles"
+dotfiles_files:
+  - .aliases
+  - .fzf.zsh
+  - .gitconfig
+  - .p10k.zsh
+  - .profile
+  - .tmux.conf
+  - .zshrc

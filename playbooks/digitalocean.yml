@@ -1,0 +1,61 @@
+---
+- hosts: do
+  remote_user: root
+  gather_facts: false
+
+  vars_files:
+    - vars.yml
+
+  pre_tasks:
+    - name: Wait for port 22 to become available
+      local_action: "wait_for port=22 host={{ inventory_hostname }}"
+    
+    - name: Gathering Facts
+      setup:
+
+    # - name: Ensure .ssh folder is created
+    #   file:
+    #     path: ~/.ssh
+    #     state: directory
+    #     mode: 0700
+
+    # - name: Ensure SSH key pair is created
+    #   openssh_keypair:
+    #     path: ~/.ssh/id_github
+    #     state: present
+    #     type: "ed25519"
+    #     comment: "test@digitalocean"
+    #   register: keys
+
+    # - name: Ensure SSH key is on GitHub
+    #   github_key:
+    #     name: "test@digitalocean"
+    #     token: "{{ github_access_token }}"
+    #     state: present
+    #     pubkey: "{{ keys.public_key }}"
+
+  tasks:
+    - name: Ensure user is created
+      include_role:
+        name: weareinteractive.users
+
+    - name: Ensure git is installed
+      import_role:
+        name: geerlingguy.git
+
+- hosts: do
+  remote_user: "{{ users[0].username }}"
+  gather_facts: false
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Ensure dotfiles repo is present
+      import_role:
+        name: geerlingguy.dotfiles
+
+  # roles:
+  #   - weareinteractive.users
+  #   - geerlingguy.git
+  #   - geerlingguy.dotfiles
