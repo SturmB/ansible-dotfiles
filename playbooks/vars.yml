@@ -15,10 +15,10 @@ users:
     groups:
       - admin
     append: yes
-    ssh_key_generate: yes
-    ssh_key_type: "ed25519"
-    ssh_key_comment: "test@digitalocean"
-    ssh_key_file: .ssh/id_github
+    # ssh_key_generate: yes
+    # ssh_key_type: ed25519
+    # ssh_key_comment: "test@digitalocean"
+    # ssh_key_file: ~/.ssh/id_github
 
 # geerlingguy.git
 

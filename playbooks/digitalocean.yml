@@ -13,27 +13,6 @@
     - name: Gathering Facts
       setup:
 
-    # - name: Ensure .ssh folder is created
-    #   file:
-    #     path: ~/.ssh
-    #     state: directory
-    #     mode: 0700
-
-    # - name: Ensure SSH key pair is created
-    #   openssh_keypair:
-    #     path: ~/.ssh/id_github
-    #     state: present
-    #     type: "ed25519"
-    #     comment: "test@digitalocean"
-    #   register: keys
-
-    # - name: Ensure SSH key is on GitHub
-    #   github_key:
-    #     name: "test@digitalocean"
-    #     token: "{{ github_access_token }}"
-    #     state: present
-    #     pubkey: "{{ keys.public_key }}"
-
   tasks:
     - name: Ensure user is created
       include_role:
@@ -51,11 +30,21 @@
     - vars.yml
 
   tasks:
-    - name: Ensure dotfiles repo is present
-      import_role:
-        name: geerlingguy.dotfiles
+    - name: Ensure SSH key pair is created
+      openssh_keypair:
+        path: ~/.ssh/id_github
+        state: present
+        type: "ed25519"
+        comment: "test@digitalocean"
+      register: keys
 
-  # roles:
-  #   - weareinteractive.users
-  #   - geerlingguy.git
-  #   - geerlingguy.dotfiles
+    - name: Ensure SSH key is on GitHub
+      github_key:
+        name: "test@digitalocean"
+        token: "{{ github_access_token }}"
+        state: present
+        pubkey: "{{ keys.public_key }}"
+
+    # - name: Ensure dotfiles repo is present
+    #   import_role:
+    #     name: geerlingguy.dotfiles
