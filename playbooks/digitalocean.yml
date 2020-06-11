@@ -38,11 +38,6 @@
     - vars.yml
 
   tasks:
-    # - name: Ensure rbenv is installed
-    #   import_role:
-    #     name: zzet.rbenv
-    #   become: true
-
     - name: Ensure SSH key pair is created
       openssh_keypair:
         path: ~/.ssh/id_github
@@ -58,6 +53,6 @@
         state: present
         pubkey: "{{ keys.public_key }}"
 
-    - name: Ensure dotfiles repo is present
+    - name: Ensure dotfiles repo is present and linked
       import_role:
         name: geerlingguy.dotfiles

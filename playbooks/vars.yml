@@ -24,19 +24,11 @@ zsh_user: "{{ new_user }}"
 zsh_antigen_bundles_extras:
   - joel-porquet/zsh-dircolors-solarized
   - romkatv/powerlevel10k
+  - zsh-users/zsh-syntax-highlighting
   - zsh-users/zsh-completions
+  - zsh-users/zsh-autosuggestions
 zsh_autosuggestions_bind_key: "^U"
 zsh_antigen_theme: "romkatv/powerlevel10k powerlevel10k"
-
-# zzet.rbenv
-# rbenv:
-#   env: user
-#   version: v1.1.2
-#   default_ruby: 2.7.1
-#   rubies:
-#     - 2.7.1
-# rbenv_users:
-#   - user: "{{ new_user }}"
 
 # geerlingguy.ruby
 ruby_install_gems:
@@ -53,6 +45,5 @@ dotfiles_files:
   - .fzf.zsh
   - .gitconfig
   - .p10k.zsh
-  - .profile
   - .tmux.conf
   - .zshrc.local

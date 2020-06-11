@@ -1,7 +1,6 @@
 ---
 - src: weareinteractive.users
 - src: geerlingguy.git
-- src: viasite-ansible.zsh
-- src: zzet.rbenv
 - src: geerlingguy.ruby
+- src: viasite-ansible.zsh
 - src: geerlingguy.dotfiles
