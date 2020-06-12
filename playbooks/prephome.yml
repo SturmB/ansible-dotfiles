@@ -65,7 +65,7 @@
       register: keys
 
     - debug:
-      var: keys
+        var: keys
 
     - name: Ensure SSH key is on GitHub
       github_key:
