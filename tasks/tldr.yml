@@ -17,3 +17,4 @@
     dest: /usr/local/bin
     creates: /usr/local/bin/{{ tldr_filename }}
     mode: a+x
+  when: not tldr_stat.stat.exists

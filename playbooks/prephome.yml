@@ -74,8 +74,6 @@
         state: present
         pubkey: "{{ keys.public_key }}"
 
-    - name: Ensure SSH key pair is loaded
-
     - name: Ensure dotfiles repo is present and linked
       import_role:
         name: geerlingguy.dotfiles
