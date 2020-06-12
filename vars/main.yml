@@ -8,7 +8,7 @@ users:
   - username: "{{ new_user }}"
     name: Chris McGee
     uid: 1000
-    password: $6$somesecretsalthe$xrTgcmmIHNkg9bIsyMm6fDq6W6sCH8.r4J8FWFxPirXFmN61xr6PP7kX.I3dBEEkUyDFoQIfk0mfKaWEgAstD1
+    password: $6$f.IoSva2Rs3A28a3$MxegsR/w1wxPwAdELylSu/vuJSCML8LwDv.eaLl2DjkwuPfAb1VQLT7oWioV1xxVEVGTxyYPLHMBBVve7MsO9.
     authorized_keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
     home_create: yes

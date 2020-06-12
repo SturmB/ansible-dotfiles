@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars_files:
-    - vars.yml
+    - ../vars/main.yml
 
   pre_tasks:
     - name: Wait for port 22 to become available
@@ -20,31 +20,42 @@
       include_role:
         name: weareinteractive.users
 
+- hosts: all
+  remote_user: "{{ new_user }}"
+  gather_facts: true
+
+  vars_files:
+    - ../vars/main.yml
+
+  pre_tasks:
+    - name: Adjust fact for Pengwin
+      set_fact: ansible_os_family="Debian"
+      when: ansible_os_family == "Pengwin"
+
+  tasks:
     - name: Ensure git is installed
       import_role:
         name: geerlingguy.git
+      become: yes
 
     - name: Ensure Ruby and gems are installed
       include_role:
         name: geerlingguy.ruby
+        apply:
+          become: yes
 
     - name: Ensure zsh and all plugins are installed
       include_role:
         name: viasite-ansible.zsh
+        apply:
+          become: yes
 
     - name: Ensure tldr++ is installed
       import_tasks: ../tasks/tldr.yml
       tags:
         - tldr
+      become: yes
 
-- hosts: do
-  remote_user: "{{ new_user }}"
-  gather_facts: false
-
-  vars_files:
-    - vars.yml
-
-  tasks:
     - name: Ensure SSH key pair is created
       openssh_keypair:
         path: ~/.ssh/id_github
@@ -53,12 +64,17 @@
         comment: "test@digitalocean"
       register: keys
 
+    - debug:
+      var: keys
+
     - name: Ensure SSH key is on GitHub
       github_key:
         name: "test@digitalocean"
         token: "{{ github_access_token }}"
         state: present
         pubkey: "{{ keys.public_key }}"
+
+    - name: Ensure SSH key pair is loaded
 
     - name: Ensure dotfiles repo is present and linked
       import_role:
