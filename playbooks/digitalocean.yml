@@ -9,6 +9,8 @@
   pre_tasks:
     - name: Wait for port 22 to become available
       local_action: "wait_for port=22 host={{ inventory_hostname }}"
+      tags:
+        - tldr
     
     - name: Gathering Facts
       setup:
@@ -29,6 +31,11 @@
     - name: Ensure zsh and all plugins are installed
       include_role:
         name: viasite-ansible.zsh
+
+    - name: Ensure tldr++ is installed
+      import_tasks: ../tasks/tldr.yml
+      tags:
+        - tldr
 
 - hosts: do
   remote_user: "{{ new_user }}"
@@ -56,3 +63,10 @@
     - name: Ensure dotfiles repo is present and linked
       import_role:
         name: geerlingguy.dotfiles
+
+    - name: Initialize tldr++
+      command:
+        cmd: tldr
+        creates: ~/.local/share/tldr/
+      tags:
+        - tldr

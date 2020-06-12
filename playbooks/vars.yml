@@ -47,3 +47,7 @@ dotfiles_files:
   - .p10k.zsh
   - .tmux.conf
   - .zshrc.local
+
+# tldr
+tldr_version: "0.6.1"
+tldr_filename: "tldr_{{ tldr_version }}_linux_amd64.tar.gz"

@@ -15,11 +15,15 @@
         region: nyc3
         ssh_keys: 24968128
         unique_name: yes
-      register: do
+      register: droplet
+      tags:
+        - tldr
 
     - name: Add new host to our inventory
       add_host:
-        name: "{{ do.data.ip_address }}"
+        name: "{{ droplet.data.ip_address }}"
         groups: do
-      when: do.data is defined
+      when: droplet.data is defined
       changed_when: False
+      tags:
+        - tldr
