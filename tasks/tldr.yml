@@ -20,5 +20,6 @@
   when: not tldr_stat.stat.exists
 
 - name: Ensure downloaded file is removed
-  path: /home/{{ new_user }}/{{ tldr_filename }}
-  state: absent
+  file:
+    path: /home/{{ new_user }}/{{ tldr_filename }}
+    state: absent
