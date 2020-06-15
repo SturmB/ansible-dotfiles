@@ -18,3 +18,7 @@
     creates: /usr/local/bin/{{ tldr_filename }}
     mode: a+x
   when: not tldr_stat.stat.exists
+
+- name: Ensure downloaded file is removed
+  path: /home/{{ new_user }}/{{ tldr_filename }}
+  state: absent
