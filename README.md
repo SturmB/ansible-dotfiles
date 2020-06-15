@@ -61,7 +61,13 @@ Change `new_user` to whatever username you desire.
 nano ~/ansible-dotfiles/playbooks/vars.yml
 ```
 
-### Step 8: Run the Ansible playbook
+### Step 8: Obtain the roles needed for the playbook
+
+```zsh
+ansible-galaxy install -r requirements.yml
+```
+
+### Step 9: Run the Ansible playbook
 
 Enter the user's password at the "BECOME" prompt.
 
@@ -70,4 +76,4 @@ cd ansible-dotfiles
 ansible-playbook -K main.yml
 ```
 
-### Step 9: Restart the shell
+### Step 10: Restart the shell
