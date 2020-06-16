@@ -26,7 +26,11 @@ cd ansible-dotfiles
 ./install.sh
 ```
 
-If you prefer to install manually, continue on with the following steps.
+If you prefer to install manually, however, continue on with the following steps instead. They assume that are still in the home directory. If not, go there first:
+
+```zsh
+cd ~
+```
 
 ### Step 3: Install Python 3
 
@@ -73,7 +77,13 @@ Enter the user's password at the "BECOME" prompt.
 
 ```zsh
 cd ansible-dotfiles
-ansible-playbook -K main.yml
+ansible-playbook -K ./playbooks/prephome.yml
 ```
 
 ### Step 10: Restart the shell
+
+---
+
+## In Case of Crash
+
+Should the Ansible playbook should stop for any reason while running inside the installer script, you'll need to manually `source ~/.profile` before trying to run it manually as in Step 9.
