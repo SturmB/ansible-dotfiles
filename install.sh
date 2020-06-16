@@ -65,7 +65,7 @@ if [ ! "$(which pip3)" ]; then
 fi
 
 title "Install Ansible if it isn't already installed"
-if [ ! "$(which ansible-playbook)" ]; then
+if [ ! -f "$HOME/.local/bin/ansible" ]; then
     if [[ $LIKE == 'debian' ]]; then
         pip3 install --user ansible
     else
@@ -74,7 +74,7 @@ if [ ! "$(which ansible-playbook)" ]; then
 fi
 
 title "Source .profile to refresh the \$PATH"
-source ~/.profile
+source $HOME/.profile
 
 title "Install Ansible Galaxy roles"
 ansible-galaxy install -r requirements.yml
