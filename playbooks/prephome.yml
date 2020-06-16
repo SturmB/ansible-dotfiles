@@ -58,15 +58,15 @@
 
     - name: Ensure SSH key pair is created
       openssh_keypair:
-        path: ~/.ssh/id_github
+        path: ~/.ssh/id_rsa
         state: present
         type: "ed25519"
-        comment: "test@digitalocean"
+        comment: "{{ ssh_key_comment }}"
       register: keys
 
     - name: Ensure SSH key is on GitHub
       github_key:
-        name: "test@digitalocean"
+        name: "{{ ssh_key_comment }}"
         token: "{{ github_access_token }}"
         state: present
         pubkey: "{{ keys.public_key }}"

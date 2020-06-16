@@ -2,6 +2,7 @@
 # misc
 github_access_token: 709f29af957aa7518635e5dbd378b2b19a6d3801
 new_user: "sturm"
+ssh_key_comment: "{{ ansible_user_id }}@{{ ansible_hostname }}"
 
 # weareinteractive.users
 users:
@@ -20,7 +21,6 @@ users:
 # geerlingguy.git
 
 # viasite-ansible.zsh
-zsh_user: "{{ new_user }}"
 zsh_antigen_bundles_extras:
   - joel-porquet/zsh-dircolors-solarized
   - romkatv/powerlevel10k
@@ -34,7 +34,7 @@ zsh_antigen_theme: "romkatv/powerlevel10k powerlevel10k"
 ruby_install_gems:
   - colorls
   - lolcat
-ruby_install_gems_user: "{{ new_user }}"
+ruby_install_gems_user: "{{ ansible_user_id }}"
 
 # geerlingguy.dotfiles
 dotfiles_repo: "https://github.com/SturmB/dotfiles.git"
