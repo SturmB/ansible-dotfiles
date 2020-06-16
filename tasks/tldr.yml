@@ -6,20 +6,20 @@
 
 - name: Download tldr++ from source
   get_url:
-    dest: /home/{{ new_user }}/
+    dest: "/home/{{ ansible_user_id }}/"
     url: "https://github.com/isacikgoz/tldr/releases/download/v{{ tldr_version }}/{{ tldr_filename }}"
   when: not tldr_stat.stat.exists
 
 - name: Unpack tldr++ archive
   become: yes
   unarchive:
-    src: /home/{{ new_user }}/{{ tldr_filename }}
-    dest: /usr/local/bin
-    creates: /usr/local/bin/{{ tldr_filename }}
+    src: "/home/{{ ansible_user_id }}/{{ tldr_filename }}"
+    dest: "/usr/local/bin"
+    creates: "/usr/local/bin/{{ tldr_filename }}"
     mode: a+x
   when: not tldr_stat.stat.exists
 
 - name: Ensure downloaded file is removed
   file:
-    path: /home/{{ new_user }}/{{ tldr_filename }}
+    path: "/home/{{ ansible_user_id }}/{{ tldr_filename }}"
     state: absent
