@@ -10,7 +10,7 @@ These steps assume that you already have a user on the local machine with sudo a
 
 ```zsh
 sudo apt update
-sudo apt install git
+sudo apt install -y git
 ```
 
 ### Step 2: Clone this repo

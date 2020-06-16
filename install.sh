@@ -74,7 +74,7 @@ if [ ! "$(which ansible-playbook)" ]; then
 fi
 
 title "Source .profile to refresh the \$PATH"
-source .profile
+source ~/.profile
 
 title "Install Ansible Galaxy roles"
 ansible-galaxy install -r requirements.yml
