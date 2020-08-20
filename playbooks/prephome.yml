@@ -38,6 +38,17 @@
         name: geerlingguy.git
       become: yes
 
+    - name: Ensure apt packages are installed
+      apt:
+        state: present
+        update_cache: yes
+        upgrade: yes
+        name:
+          - cowsay
+          - fortune
+          - figlet
+          - neofetch
+
     - name: Ensure Ruby and gems are installed
       include_role:
         name: geerlingguy.ruby
@@ -55,6 +66,11 @@
       tags:
         - tldr
       become: yes
+
+    - name: Ensure SSH directory exists
+      file:
+        path: ~/.ssh
+        state: directory
 
     - name: Ensure SSH key pair is created
       openssh_keypair:
@@ -81,3 +97,8 @@
         creates: ~/.local/share/tldr/
       tags:
         - tldr
+
+    - name: Ensure tmux is installed properly
+      git:
+        repo: https://github.com/tmux-plugins/tpm
+        dest: ~/.tmux/plugins/tpm

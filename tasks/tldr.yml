@@ -8,6 +8,8 @@
   get_url:
     dest: "/home/{{ ansible_user_id }}/"
     url: "https://github.com/isacikgoz/tldr/releases/download/v{{ tldr_version }}/{{ tldr_filename }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
   when: not tldr_stat.stat.exists
 
 - name: Unpack tldr++ archive
