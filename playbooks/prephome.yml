@@ -33,21 +33,22 @@
       when: ansible_os_family == "Pengwin"
 
   tasks:
-    - name: Ensure git is installed
-      import_role:
-        name: geerlingguy.git
-      become: yes
+    # - name: Ensure git is installed
+    #   import_role:
+    #     name: geerlingguy.git
+    #   become: yes
 
     - name: Ensure apt packages are installed
       apt:
-        state: present
+        state: latest
         update_cache: yes
-        upgrade: yes
+        # upgrade: yes
         name:
           - cowsay
           - fortune
           - figlet
           - neofetch
+      become: yes
 
     - name: Ensure Ruby and gems are installed
       include_role:

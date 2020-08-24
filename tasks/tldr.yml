@@ -10,6 +10,7 @@
     url: "https://github.com/isacikgoz/tldr/releases/download/v{{ tldr_version }}/{{ tldr_filename }}"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
+    mode: 0600
   when: not tldr_stat.stat.exists
 
 - name: Unpack tldr++ archive

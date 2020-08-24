@@ -39,32 +39,49 @@ else
     VER=$(uname -r)
 fi
 
-title "Update this repo to the latest version, just in case"
+title "Ensure Git is installed"
 if [ ! "$(which git)" ]; then
     if [[ $LIKE == 'debian' ]]; then
         sudo apt update
         sudo apt install -y git
+        sudo apt-mark auto git
     else
         sudo apt update
         sudo apt install -y git
+        sudo apt-mark auto git
     fi
 fi
+
+title "Update this repo to the latest version, just in case"
 git pull
 
-title "Install Python3 and PIP"
-if [ ! "$(which pip3)" ]; then
+title "Ensure Python3 is installed"
+if [ ! "$(which python3)" ]; then
     if [[ $LIKE == 'debian' ]]; then
         sudo apt update
         sudo apt install -y python3
-        sudo apt install -y python3-pip
+        sudo apt-mark auto python3
     else
         sudo apt update
         sudo apt install -y python3
-        sudo apt install -y python3-pip
+        sudo apt-mark auto python3
     fi
 fi
 
-title "Install Ansible if it isn't already installed"
+title "Ensure PIP3 is installed"
+if [ ! "$(which pip3)" ]; then
+    if [[ $LIKE == 'debian' ]]; then
+        sudo apt update
+        sudo apt install -y python3-pip
+        sudo apt-mark auto python3-pip
+    else
+        sudo apt update
+        sudo apt install -y python3-pip
+        sudo apt-mark auto python3-pip
+    fi
+fi
+
+title "Ensure Ansible is installed"
 if [ ! -f "$HOME/.local/bin/ansible" ]; then
     if [[ $LIKE == 'debian' ]]; then
         pip3 install --user ansible

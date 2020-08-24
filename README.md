@@ -80,6 +80,9 @@ cd ansible-dotfiles
 ansible-playbook -K ./playbooks/prephome.yml
 ```
 
+Add `--limit local` to only run the playbook on the local computer (not on a remote machine).
+Add `--diff` to see what gets changed.
+
 ### Step 10: Restart the shell
 
 ---
@@ -87,3 +90,5 @@ ansible-playbook -K ./playbooks/prephome.yml
 ## In Case of Crash
 
 Should the Ansible playbook should stop for any reason while running inside the installer script, you'll need to manually `source ~/.profile` before trying to run it manually as in Step 9.
+
+Remember to restart your shell when it completes successfully.
