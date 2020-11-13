@@ -1,0 +1,6 @@
+---
+- name: Alias the `bat` utility
+  file:
+    path: ~/.local/bin/bat
+    src: /usr/bin/batcat
+    state: link

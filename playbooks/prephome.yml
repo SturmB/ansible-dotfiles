@@ -48,6 +48,7 @@
           - fortune
           - figlet
           - neofetch
+          - bat
       become: yes
 
     - name: Ensure Ruby and gems are installed
@@ -67,6 +68,11 @@
       tags:
         - tldr
       become: yes
+
+    - name: Ensure bat is installed
+      import_tasks: ../tasks/bat.yml
+      tags:
+        -bat
 
     - name: Ensure SSH directory exists
       file:
