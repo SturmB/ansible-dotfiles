@@ -11,7 +11,7 @@
       local_action: "wait_for port=22 host={{ inventory_hostname }}"
       tags:
         - tldr
-    
+
     - name: Gathering Facts
       setup:
 
@@ -72,7 +72,7 @@
     - name: Ensure bat is installed
       import_tasks: ../tasks/bat.yml
       tags:
-        -bat
+        - bat
 
     - name: Ensure SSH directory exists
       file:
