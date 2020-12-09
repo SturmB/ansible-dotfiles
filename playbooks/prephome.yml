@@ -23,6 +23,8 @@
 - hosts: all
   remote_user: "{{ new_user }}"
   gather_facts: true
+  # environment:
+  #   NVS_HOME: "{{ nvs_home }}"
 
   vars_files:
     - ../vars/main.yml
@@ -109,3 +111,30 @@
       git:
         repo: https://github.com/tmux-plugins/tpm
         dest: ~/.tmux/plugins/tpm
+
+    # - name: See if NVS is already installed
+    #   lineinfile:
+    #     path: ~/.zshrc
+    #     line: export NVS_HOME="$HOME/.nvs"
+    #     state: present
+    #   check_mode: true
+    #   register: zshrc
+    #   tags:
+    #     - nvs
+
+    # - name: Clone the NVS repo
+    #   git:
+    #     repo: https://github.com/jasongin/nvs
+    #     dest: "{{ nvs_home }}"
+    #     version: v1.6.0
+    #   ignore_errors: true
+    #   when: (zshrc is changed) or (zshrc is failed)
+    #   tags:
+    #     - nvs
+
+    # - name: Ensure NVS is installed
+    #   shell: "export NVS_HOME=\"$HOME/.nvs\" && . {{ nvs_home }}/nvs.sh install"
+    #   when: (zshrc is changed) or (zshrc is failed)
+    #   tags:
+    #     - nvs
+    #   debugger: on_failed
