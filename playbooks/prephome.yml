@@ -51,6 +51,7 @@
           - figlet
           - neofetch
           - bat
+          - lsd
           - php-gd
           - php-zip
           - php7.4-gd
