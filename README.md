@@ -15,18 +15,28 @@ sudo apt install -y git
 
 ### Step 2: Clone this repo
 
+This will require that you have [SSH access to GitHub](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+
 ```zsh
-git clone https://github.com/SturmB/ansible-dotfiles.git
+git clone git@github.com:SturmB/ansible-dotfiles.git
 ```
 
-At this point, you should be able to run the installer
+At this point, you should be able to run the installer.
 
 ```zsh
 cd ansible-dotfiles
 ./install.sh
 ```
 
-If you prefer to install manually, however, continue on with the following steps instead. They assume that are still in the home directory. If not, go there first:
+---
+
+#### **NOTE**
+
+_There is currently a bug with this installer script that causes it to fail. This is being looked into. Until a fix is discovered, just make a note of where in the script it failed and continue manually from that point using the steps below._
+
+---
+
+If you prefer to install manually, however, continue on with the following steps instead. They assume that you are still in the home directory. If not, go there first:
 
 ```zsh
 cd ~
