@@ -29,6 +29,9 @@ zsh_antigen_bundles_extras:
   - zsh-users/zsh-completions
   - zsh-users/zsh-autosuggestions
   - colored-man-pages
+  - npm
+  - sudo
+  - git
 zsh_autosuggestions_bind_key: "^U"
 zsh_antigen_theme: "romkatv/powerlevel10k powerlevel10k"
 
