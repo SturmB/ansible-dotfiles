@@ -1,6 +1,6 @@
 ---
 # misc
-github_access_token: 709f29af957aa7518635e5dbd378b2b19a6d3801
+github_access_token: "{{ vault_github_access_token }}"
 new_user: "{{ ansible_user }}"
 ssh_key_comment: "{{ ansible_user_id }}@{{ ansible_hostname }}"
 nvs_home: "~/.nvs"
@@ -10,7 +10,7 @@ users:
   - username: "{{ new_user }}"
     name: Chris McGee
     uid: 1000
-    password: $6$f.IoSva2Rs3A28a3$MxegsR/w1wxPwAdELylSu/vuJSCML8LwDv.eaLl2DjkwuPfAb1VQLT7oWioV1xxVEVGTxyYPLHMBBVve7MsO9.
+    password: "{{ vault_user_password }}"
     authorized_keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
     home_create: yes
