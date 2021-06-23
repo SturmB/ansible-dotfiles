@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/SturmB/ansible-dotfiles/issues"
   },
-  "homepage": "https://github.com/SturmB/ansible-dotfiles#readme"
+  "homepage": "https://github.com/SturmB/ansible-dotfiles#readme",
+  "devDependencies": {
+    "prettier": "^2.3.1"
+  }
 }
