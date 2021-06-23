@@ -1,0 +1,24 @@
+{
+  "name": "ansible-dotfiles",
+  "version": "0.1.0",
+  "description": "The starting point for customizing a new Linux setup",
+  "main": "main.yml",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SturmB/ansible-dotfiles.git"
+  },
+  "keywords": [
+    "ansible",
+    "dotfiles",
+    "linux"
+  ],
+  "author": "Chris McGee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SturmB/ansible-dotfiles/issues"
+  },
+  "homepage": "https://github.com/SturmB/ansible-dotfiles#readme"
+}
