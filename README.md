@@ -23,7 +23,7 @@ git clone git@github.com:SturmB/ansible-dotfiles.git
 
 ### Step 3: Add the vault password
 
-The Ansible playbook won't run without the vault password, so add it to the exected file.
+The Ansible playbook won't run without the vault password, so add it to the expected file.
 
 ```zsh
 cd ansible-dotfiles
