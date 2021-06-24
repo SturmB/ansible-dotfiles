@@ -23,6 +23,9 @@
   # environment:
   #   NVS_HOME: "{{ nvs_home }}"
 
+  vars_files:
+    - ../inventories/group_vars/all/vars.yml
+
   pre_tasks:
     - name: Adjust fact for Pengwin
       set_fact: ansible_os_family="Debian"
@@ -35,7 +38,7 @@
     #   become: yes
 
     - debug:
-        var: new_user
+        var: nvs_home
 
     - name: Ensure lsd is installed
       apt:
