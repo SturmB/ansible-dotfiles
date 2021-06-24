@@ -23,8 +23,8 @@
   # environment:
   #   NVS_HOME: "{{ nvs_home }}"
 
-  vars_files:
-    - ../inventories/group_vars/all/vars.yml
+#  vars_files:
+#    - ../inventories/group_vars/all/vars.yml
 
   pre_tasks:
     - name: Adjust fact for Pengwin
