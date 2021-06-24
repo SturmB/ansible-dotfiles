@@ -34,6 +34,11 @@
     #     name: geerlingguy.git
     #   become: yes
 
+    - name: Ensure lsd is installed
+      apt:
+        deb: https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd_0.20.1_amd64.deb
+      become: yes
+
     - name: Ensure apt packages are installed
       apt:
         state: latest
@@ -45,12 +50,10 @@
           - figlet
           - neofetch
           - bat
-#          - lsd
           - php-gd
           - php-zip
           - php7.4-gd
           - php7.4-zip
-        deb: https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd_0.20.1_amd64.deb
       become: yes
 
     - name: Ensure Ruby and gems are installed
