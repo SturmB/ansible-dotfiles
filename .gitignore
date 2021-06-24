@@ -263,5 +263,4 @@ dist
 ### Ansible template
 *.retry
 roles/
-vault.yml
 .vault_pass
