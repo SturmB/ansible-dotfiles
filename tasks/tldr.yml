@@ -4,6 +4,12 @@
     path: "/usr/local/bin/tldr"
   register: tldr_stat
 
+- debug:
+    var: tldr_filename
+
+- debug:
+    var: tldr_version
+
 - name: Download tldr++ from source
   get_url:
     dest: "/home/{{ ansible_user_id }}/"
