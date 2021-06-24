@@ -42,11 +42,7 @@
         var: nvs_home
 
     - ansible.builtin.debug:
-        var: ansible_env
-      debugger: always
-
-    - ansible.builtin.debug:
-        var: env
+        var: ansible_env.WSL_DISTRO_NAME
       debugger: always
 
     - name: Ensure lsd is installed
