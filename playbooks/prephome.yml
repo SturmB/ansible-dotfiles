@@ -3,18 +3,22 @@
   remote_user: root
   gather_facts: false
 
+  vars_files:
+    - ../inventories/group_vars/all/vars.yml
+    - ../inventories/group_vars/all/vault.yml
+
   pre_tasks:
     - name: Wait for port 22 to become available
-      local_action: "wait_for port=22 host={{ inventory_hostname }}"
+      local_action: "ansible.builtin.wait_for port=22 host={{ inventory_hostname }}"
       tags:
         - tldr
 
     - name: Gathering Facts
-      setup:
+      ansible.builtin.setup:
 
   tasks:
     - name: Ensure user is created
-      include_role:
+      ansible.builtin.include_role:
         name: weareinteractive.users
 
 - hosts: all
@@ -29,30 +33,11 @@
 
   pre_tasks:
     - name: Adjust fact for Pengwin
-      set_fact: ansible_os_family="Debian"
+      ansible.builtin.set_fact: ansible_os_family="Debian"
       when: ansible_os_family == "Pengwin"
 
-  tasks:
-    # - name: Ensure git is installed
-    #   import_role:
-    #     name: geerlingguy.git
-    #   become: yes
-
-    - ansible.builtin.debug:
-        var: ssh_key_comment
-      debugger: always
-
-#    - ansible.builtin.debug:
-#        var: ansible_env.WSL_DISTRO_NAME
-#      when: ansible_env.WSL_DISTRO_NAME is defined
-
-    - name: Ensure lsd is installed
-      apt:
-        deb: https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd_0.20.1_amd64.deb
-      become: yes
-
     - name: Ensure apt packages are installed
-      apt:
+      ansible.builtin.apt:
         state: latest
         update_cache: yes
         # upgrade: yes
@@ -68,42 +53,42 @@
           - php7.4-zip
       become: yes
 
+  tasks:
+    - name: Ensure lsd is installed
+      ansible.builtin.apt:
+        deb: https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd_0.20.1_amd64.deb
+      become: yes
+
     - name: Ensure Ruby and gems are installed
-      include_role:
+      ansible.builtin.include_role:
         name: geerlingguy.ruby
         apply:
           become: yes
 
     - name: Ensure zsh and all plugins are installed
-      include_role:
+      ansible.builtin.include_role:
         name: viasite-ansible.zsh
         apply:
           become: yes
 
-    - debug:
-        var: tldr_filename
-
-    - debug:
-        var: "{{ tldr_version }}"
-
     - name: Ensure tldr++ is installed
-      import_tasks: ../tasks/tldr.yml
+      ansible.builtin.import_tasks: ../tasks/tldr.yml
       tags:
         - tldr
       become: yes
 
     - name: Ensure bat is installed
-      import_tasks: ../tasks/bat.yml
+      ansible.builtin.import_tasks: ../tasks/bat.yml
       tags:
         - bat
 
     - name: Ensure SSH directory exists
-      file:
+      ansible.builtin.file:
         path: ~/.ssh
         state: directory
 
     - name: Ensure SSH key pair is created
-      openssh_keypair:
+      community.crypto.openssh_keypair:
         path: ~/.ssh/id_ed25519
         state: present
         type: "ed25519"
@@ -111,30 +96,30 @@
       register: keys
 
     - name: Ensure SSH key is on GitHub
-      github_key:
+      community.general.github_key:
         name: "{{ ssh_key_comment }}"
         token: "{{ github_access_token }}"
         state: present
         pubkey: "{{ keys.public_key }}"
 
     - name: Ensure dotfiles repo is present and linked
-      import_role:
+      ansible.builtin.import_role:
         name: geerlingguy.dotfiles
 
     - name: Initialize tldr++
-      command:
+      ansible.builtin.command:
         cmd: tldr
         creates: ~/.local/share/tldr/
       tags:
         - tldr
 
     - name: Ensure tmux is installed properly
-      git:
+      ansible.builtin.git:
         repo: https://github.com/tmux-plugins/tpm
         dest: ~/.tmux/plugins/tpm
 
     - name: See if NVS is already installed
-      lineinfile:
+      ansible.builtin.lineinfile:
         path: ~/.zshrc
         line: export NVS_HOME="$HOME/.nvs"
         state: present
@@ -144,7 +129,7 @@
         - nvs
 
     - name: Clone the NVS repo
-      git:
+      ansible.builtin.git:
         repo: https://github.com/jasongin/nvs
         dest: "{{ nvs_home }}"
         version: v1.6.0
@@ -154,7 +139,7 @@
         - nvs
 
     - name: Ensure NVS is installed
-      shell: "export NVS_HOME=$HOME/.nvs && . {{ nvs_home }}/nvs.sh install"
+      ansible.builtin.shell: "export NVS_HOME=$HOME/.nvs && . {{ nvs_home }}/nvs.sh install"
       when: (zshrc is changed) or (zshrc is failed)
       tags:
         - nvs

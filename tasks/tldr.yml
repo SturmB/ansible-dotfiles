@@ -1,17 +1,11 @@
 ---
 - name: Check if tldr++ already exists
-  stat:
+  ansible.builtin.stat:
     path: "/usr/local/bin/tldr"
   register: tldr_stat
 
-- debug:
-    var: tldr_filename
-
-- debug:
-    var: tldr_version
-
 - name: Download tldr++ from source
-  get_url:
+  ansible.builtin.get_url:
     dest: "/home/{{ ansible_user_id }}/"
     url: "https://github.com/isacikgoz/tldr/releases/download/v{{ tldr_version }}/{{ tldr_filename }}"
     owner: "{{ ansible_user_id }}"
@@ -21,7 +15,7 @@
 
 - name: Unpack tldr++ archive
   become: yes
-  unarchive:
+  ansible.builtin.unarchive:
     src: "/home/{{ ansible_user_id }}/{{ tldr_filename }}"
     dest: "/usr/local/bin"
     creates: "/usr/local/bin/{{ tldr_filename }}"
@@ -29,6 +23,6 @@
   when: not tldr_stat.stat.exists
 
 - name: Ensure downloaded file is removed
-  file:
+  ansible.builtin.file:
     path: "/home/{{ ansible_user_id }}/{{ tldr_filename }}"
     state: absent
