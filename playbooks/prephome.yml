@@ -139,7 +139,7 @@
         - nvs
 
     - name: Ensure NVS is installed
-      ansible.builtin.shell: ". {{ nvs_home }}/nvs.sh install"
+      ansible.builtin.shell: ". /home/sturm/.nvs/nvs.sh install"
       when: (zshrc is changed) or (zshrc is failed)
       tags:
         - nvs
