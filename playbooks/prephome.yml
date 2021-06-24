@@ -72,7 +72,7 @@
         var: tldr_filename
 
     - debug:
-        var: tldr_version
+        var: "{{ tldr_version }}"
 
     - name: Ensure tldr++ is installed
       import_tasks: ../tasks/tldr.yml
