@@ -2,7 +2,7 @@
 # misc
 github_access_token: "{{ vault_github_access_token }}"
 new_user: "{{ ansible_user }}"
-ssh_key_comment: "{{ ansible_user_id }}@{{ ansible_hostname }}"
+ssh_key_comment: "{{ ansible_user_id }}@{{ ansible_distribution | lower }}@{{ ansible_hostname }}"
 nvs_home: "~/.nvs"
 
 # weareinteractive.users
@@ -12,7 +12,7 @@ users:
     uid: 1000
     password: "{{ vault_user_password }}"
     authorized_keys:
-      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      - "{{ lookup('file', '~/.ssh/id_ed25519.pub') }}"
     home_create: yes
     home_mode: "0750"
     groups:

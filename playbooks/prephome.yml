@@ -18,13 +18,14 @@
         name: weareinteractive.users
 
 - hosts: all
-  remote_user: "{{ new_user }}"
+#  remote_user: "{{ new_user }}"
   gather_facts: true
   # environment:
   #   NVS_HOME: "{{ nvs_home }}"
 
-#  vars_files:
-#    - ../inventories/group_vars/all/vars.yml
+  vars_files:
+    - ../inventories/group_vars/all/vars.yml
+    - ../inventories/group_vars/all/vault.yml
 
   pre_tasks:
     - name: Adjust fact for Pengwin
@@ -37,8 +38,12 @@
     #     name: geerlingguy.git
     #   become: yes
 
-    - debug:
+    - ansible.builtin.debug:
         var: nvs_home
+
+    - ansible.builtin.debug:
+        var: ansible_facts
+      debugger: always
 
     - name: Ensure lsd is installed
       apt:
@@ -98,7 +103,7 @@
 
     - name: Ensure SSH key pair is created
       openssh_keypair:
-        path: ~/.ssh/id_rsa
+        path: ~/.ssh/id_ed25519
         state: present
         type: "ed25519"
         comment: "{{ ssh_key_comment }}"
