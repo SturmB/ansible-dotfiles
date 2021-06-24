@@ -39,12 +39,12 @@
     #   become: yes
 
     - ansible.builtin.debug:
-        var: nvs_home
-
-    - ansible.builtin.debug:
-        var: ansible_env.WSL_DISTRO_NAME
-      when: ansible_env.WSL_DISTRO_NAME is defined
+        var: ssh_key_comment
       debugger: always
+
+#    - ansible.builtin.debug:
+#        var: ansible_env.WSL_DISTRO_NAME
+#      when: ansible_env.WSL_DISTRO_NAME is defined
 
     - name: Ensure lsd is installed
       apt:
