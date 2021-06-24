@@ -43,6 +43,7 @@
 
     - ansible.builtin.debug:
         var: ansible_env.WSL_DISTRO_NAME
+      when: ansible_env.WSL_DISTRO_NAME is defined
       debugger: always
 
     - name: Ensure lsd is installed
