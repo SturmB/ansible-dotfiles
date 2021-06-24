@@ -21,10 +21,20 @@ This will require that you have [SSH access to GitHub](https://docs.github.com/e
 git clone git@github.com:SturmB/ansible-dotfiles.git
 ```
 
-At this point, you should be able to run the installer.
+### Step 3: Add the vault password
+
+The Ansible playbook won't run without the vault password, so add it to the exected file.
 
 ```zsh
 cd ansible-dotfiles
+echo [password] > .vault_pass
+```
+
+### Step 4: Run the installer
+
+At this point, you should be able to run the installer.
+
+```zsh
 ./install.sh
 ```
 
@@ -42,32 +52,32 @@ If you prefer to install manually, however, continue on with the following steps
 cd ~
 ```
 
-### Step 3: Install Python 3
+### Step 5: Install Python 3
 
 ```zsh
 sudo apt update
 sudo apt install -y python3
 ```
 
-### Step 4: [Install PIP](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-with-pip)
+### Step 6: [Install PIP](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-with-pip)
 
 ```zsh
 sudo apt install -y python3-pip
 ```
 
-### Step 5: [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-with-pip)
+### Step 7: [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-with-pip)
 
 ```zsh
 pip3 install --user ansible
 ```
 
-### Step 6: Refresh the $PATH
+### Step 8: Refresh the $PATH
 
 ```zsh
 source .profile
 ```
 
-### Step 7: Edit the variables
+### Step 9: Edit the variables
 
 Change `new_user` to whatever username you desire.
 
@@ -75,13 +85,13 @@ Change `new_user` to whatever username you desire.
 nano ~/ansible-dotfiles/playbooks/vars.yml
 ```
 
-### Step 8: Obtain the roles needed for the playbook
+### Step 10: Obtain the roles needed for the playbook
 
 ```zsh
 ansible-galaxy install -r requirements.yml
 ```
 
-### Step 9: Run the Ansible playbook
+### Step 11: Run the Ansible playbook
 
 Enter the user's password at the "BECOME" prompt.
 
@@ -93,12 +103,12 @@ ansible-playbook -K ./playbooks/prephome.yml
 Add `--limit local` to only run the playbook on the local computer (not on a remote machine).
 Add `--diff` to see what gets changed.
 
-### Step 10: Restart the shell
+### Step 12: Restart the shell
 
 ---
 
 ## In Case of Crash
 
-Should the Ansible playbook should stop for any reason while running inside the installer script, you'll need to manually `source ~/.profile` before trying to run it manually as in Step 9.
+Should the Ansible playbook should stop for any reason while running inside the installer script, you'll need to manually `source ~/.profile` before trying to run it manually as in Step 11.
 
 Remember to restart your shell when it completes successfully.
