@@ -39,7 +39,6 @@ zsh_antigen_theme: "romkatv/powerlevel10k powerlevel10k"
 ruby_install_gems:
   - colorls
   - lolcat
-  - travis
 ruby_install_gems_user: "{{ ansible_user_id }}"
 
 # geerlingguy.dotfiles
