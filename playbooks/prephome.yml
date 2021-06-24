@@ -102,10 +102,6 @@
         state: present
         pubkey: "{{ keys.public_key }}"
 
-    - name: Ensure dotfiles repo is present and linked
-      ansible.builtin.import_role:
-        name: geerlingguy.dotfiles
-
     - name: Initialize tldr++
       ansible.builtin.command:
         cmd: tldr
@@ -144,3 +140,9 @@
       tags:
         - nvs
       debugger: on_failed
+
+    - name: Ensure dotfiles repo is present and linked
+      ansible.builtin.import_role:
+        name: geerlingguy.dotfiles
+      tags:
+        - never
