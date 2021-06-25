@@ -134,6 +134,9 @@
       tags:
         - nvs
 
+    # This task is currently broken. It supposedly adds a couple of lines to `.zshrc`,
+    # but the wonky way in which it does so cannot currently be replicated via Ansible.
+    # For now, the task 'runs' without error, but doesn't really do anything.
     - name: Ensure NVS is installed
       ansible.builtin.shell: zsh -ic "export NVS_HOME=\"$HOME/.nvs\"; `. \"{{ nvs_home }}/nvs.sh\" install`"
       when: (zshrc is changed) or (zshrc is failed)
@@ -144,5 +147,3 @@
     - name: Ensure dotfiles repo is present and linked
       ansible.builtin.import_role:
         name: geerlingguy.dotfiles
-      tags:
-        - never
