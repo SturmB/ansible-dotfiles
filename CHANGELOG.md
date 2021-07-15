@@ -196,5 +196,3 @@
 - Local Only [[a7a3bb4](https://github.com/SturmB/ansible-dotfiles/commit/a7a3bb4a3f3492057ecc6ef6c7c92e9ccbdc8069)]
 - Initial Setup [[25cebec](https://github.com/SturmB/ansible-dotfiles/commit/25cebec44bd06b5a0987da53fff1098f692a0e37)]
 - first commit [[9755e7c](https://github.com/SturmB/ansible-dotfiles/commit/9755e7c10e32811fc04f4cdd3dde83ac50c45315)]
-
-
