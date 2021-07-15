@@ -147,3 +147,39 @@
     - name: Ensure dotfiles repo is present and linked
       ansible.builtin.import_role:
         name: geerlingguy.dotfiles
+      tags:
+        - never
+
+    - name: Ensure dotfiles are linked
+      ansible.builtin.include_role:
+        name: geerlingguy.dotfiles
+      loop:
+        - dest: "~/.dotfiles"
+          home: "~"
+          files:
+            - .aliases
+            - .fzf.zsh
+            - .gitconfig
+            - .p10k.zsh
+            - .tmux.conf
+            - .zshrc.local
+        - dest: "~/.dotfiles"
+          home: "/mnt/c/Users/christopher.mcgee/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
+          files:
+            - settings.json
+        - dest: "~/.dotfiles"
+          home: "/mnt/c/Keypirinha/portable/Profile/User"
+          files:
+            - cvt.ini
+            - ditto.ini
+            - easysearch.ini
+            - goggalaxy.ini
+            - Keypirinha.ini
+            - my-conversions.json
+            - zealous.ini
+      loop_control:
+        loop_var: dotfiles_item
+      vars:
+        dotfiles_repo_local_destination: "{{ dotfiles_item.dest }}"
+        dotfiles_files: "{{ dotfiles_item.files }}"
+        dotfiles_home: "{{ dotfiles_item.home }}"
