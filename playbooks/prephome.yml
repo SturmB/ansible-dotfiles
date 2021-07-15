@@ -148,7 +148,7 @@
       ansible.builtin.import_role:
         name: geerlingguy.dotfiles
       tags:
-        - never
+        - dotfiles
 
     - name: Ensure dotfiles are linked
       ansible.builtin.include_role:
@@ -183,3 +183,6 @@
         dotfiles_repo_local_destination: "{{ dotfiles_item.dest }}"
         dotfiles_files: "{{ dotfiles_item.files }}"
         dotfiles_home: "{{ dotfiles_item.home }}"
+      tags:
+        - dotfiles
+        - never
