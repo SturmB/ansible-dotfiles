@@ -1,27 +1,27 @@
 {
   "name": "ansible-dotfiles",
-  "version": "0.1.0",
   "description": "The starting point for customizing a new Linux setup",
-  "main": "main.yml",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.1.0",
+  "author": "Chris McGee",
+  "bugs": {
+    "url": "https://github.com/SturmB/ansible-dotfiles/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/SturmB/ansible-dotfiles.git"
+  "devDependencies": {
+    "prettier": "^2.3.1"
   },
+  "homepage": "https://github.com/SturmB/ansible-dotfiles#readme",
   "keywords": [
     "ansible",
     "dotfiles",
     "linux"
   ],
-  "author": "Chris McGee",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SturmB/ansible-dotfiles/issues"
+  "main": "main.yml",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SturmB/ansible-dotfiles.git"
   },
-  "homepage": "https://github.com/SturmB/ansible-dotfiles#readme",
-  "devDependencies": {
-    "prettier": "^2.3.1"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
