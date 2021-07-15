@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.6.0"></a>
+## 1.6.0 (2021-07-15)
+
+### Changed
+
+- 🎨 Minor format change to Changelog [[bc928fa](https://github.com/SturmB/ansible-dotfiles/commit/bc928faeac91d34e1d731fef4d2e13fb60030185)]
+
+### Fixed
+
+- 🐛 Fixes variables not being read issue [[643d7e1](https://github.com/SturmB/ansible-dotfiles/commit/643d7e1ca4970bbf55221ce46fbf0d02779f65f5)]
+
+### Security
+
+- 🔒 Uses new GitHub Personal Access Token [[66c1843](https://github.com/SturmB/ansible-dotfiles/commit/66c1843d2854156a9248c3e1ceca7057ec602a4f)]
+
+
 <a name="1.5.0"></a>
 ## 1.5.0 (2021-07-15)
 
