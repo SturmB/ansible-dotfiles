@@ -97,7 +97,7 @@ title "Install Ansible Galaxy roles"
 ansible-galaxy install -r requirements.yml
 
 title "Run the Ansible Playbook"
-ansible-playbook -K -i "localhost," -c local ./playbooks/prephome.yml
+ansible-playbook -K ./playbooks/prephome.yml
 
 title "Finished! Please restart your shell."
 echo ""

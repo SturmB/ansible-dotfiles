@@ -3,10 +3,6 @@
   remote_user: root
   gather_facts: false
 
-  vars_files:
-    - ../inventories/group_vars/all/vars.yml
-    - ../inventories/group_vars/all/vault.yml
-
   pre_tasks:
     - name: Wait for port 22 to become available
       local_action: "ansible.builtin.wait_for port=22 host={{ inventory_hostname }}"
@@ -22,14 +18,7 @@
         name: weareinteractive.users
 
 - hosts: all
-#  remote_user: "{{ new_user }}"
   gather_facts: true
-  # environment:
-  #   NVS_HOME: "{{ nvs_home }}"
-
-  vars_files:
-    - ../inventories/group_vars/all/vars.yml
-    - ../inventories/group_vars/all/vault.yml
 
   pre_tasks:
     - name: Adjust fact for Pengwin
