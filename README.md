@@ -105,6 +105,29 @@ Add `--diff` to see what gets changed.
 
 ### Step 12: Restart the shell
 
+### Step 13: Add NVS and packages
+
+For now, NVS won't install via Ansible, so it must be done manually. Either [follow the official instructions](https://github.com/jasongin/nvs#mac-linux) or just run the following:
+
+```zsh
+export NVS_HOME="$HOME/.nvs"
+git clone https://github.com/jasongin/nvs "$NVS_HOME"
+. "$NVS_HOME/nvs.sh" install
+```
+
+When that's done, install the version of node you want by just running `nvs` and following the menu prompts. Or, if you want the `latest` or `lts` release, `nvs add [latest|lts]`. And don't forget to set one of them as the default!
+
+```zsh
+nvs link [latest|lts]
+```
+
+Then add any global npm packages frequently used:
+
+```zsh
+npm i -g fixpack
+npm i -g gitmoji-changelog
+```
+
 ---
 
 ## In Case of Crash
