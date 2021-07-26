@@ -1,7 +1,7 @@
 {
   "name": "ansible-dotfiles",
   "description": "The starting point for customizing a new Linux setup",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "author": "Chris McGee",
   "bugs": {
     "url": "https://github.com/SturmB/ansible-dotfiles/issues"

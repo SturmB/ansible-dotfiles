@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.6.1"></a>
+## 1.6.1 (2021-07-26)
+
+### Miscellaneous
+
+- 📝 Adds nvs and npm commands to the docs [[de439db](https://github.com/SturmB/ansible-dotfiles/commit/de439dbedbd292d04aef31bb6a0070ed4e234414)]
+
+
 <a name="1.6.0"></a>
 ## 1.6.0 (2021-07-15)
 
