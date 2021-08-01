@@ -56,6 +56,7 @@
           - php-zip
           - php7.4-gd
           - php7.4-zip
+          - php7.4-cli
       become: yes
 
     - name: Ensure Ruby and gems are installed
