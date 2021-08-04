@@ -68,7 +68,9 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       7-Zip: https://www.7-zip.org/
          Run as admin->Tools->Options->System->Associate 7-Zip with: first + button (for current user only)
       Steam: https://store.steampowered.com/about/
+         Steam -> Steam menu -> Settings -> Downloads -> Steam Library Folders
       GOG Galaxy: https://www.gog.com/galaxy
+         Gear -> Settings -> Installing, updating -> Game installation folder: Set to ``G:\GOG``
       Epic Games: https://www.epicgames.com/store/en-US/download
       Keypirinha: https://keypirinha.com/download.html
          Copy ``Keypirinha.ini`` from ``dotfiles`` repo
@@ -96,12 +98,16 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       Directory Opus: https://www.gpsoft.com.au/DScripts/download.asp
          Restore from backup file
          Install certificate from file (search Gmail for 'Opus' to find the attached cert file)
-      VoiceMeeter Banana
+      Electric Sheep: https://electricsheep.org/#/download
+         Be sure to run it once to sign in. Helps to have the installer place a shortcut on the desktop.
+         Display -> Multi Monitor Mode: Independent
+      Virtual Audio Cable: https://vb-audio.com/Cable/index.htm
+      VoiceMeeter Banana: https://vb-audio.com/Voicemeeter/banana.htm
       OBS: https://obsproject.com/
       StreamLabs desktop software (forgot the name)
-      Snaz
       Fences 3
-      Screen saver
+      Snaz
+      iTunes
    Installing stuff for WSL and Windows Terminal
       Powerline fonts: https://github.com/powerline/fonts
          Clone repo (currently in ``D:\dev\fonts\``)
