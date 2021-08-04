@@ -40,9 +40,13 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
          Un-check ``Hide extensions for known file types``
    Install Chrome
       Sign in to Google account
+      Set up Chrome Remote Desktop
+      Restore Tampermonkey scripts from Google Drive
    Install VS Code: https://code.visualstudio.com/
-   Install Microsft Store software
+   Install Microsoft Store software
       Yubico Authenticator
+         Add to startup via Run (Win+R) -> ``shell:startup``
+         ``C:\Program Files\WindowsApps\YubicoAB.YubicoAuthenticator_5.0.5.0_x64__pjam772p9bs2g\VFS\ProgramFilesX64\Yubico\Yubico Authenticator``
       EarTrumpet
       foobar2000
       Evernote
@@ -66,16 +70,38 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       Steam: https://store.steampowered.com/about/
       GOG Galaxy: https://www.gog.com/galaxy
       Epic Games: https://www.epicgames.com/store/en-US/download
-      Keypirinha
+      Keypirinha: https://keypirinha.com/download.html
+         Copy ``Keypirinha.ini`` from ``dotfiles`` repo
+         Install packages
+            List all packages here, starting with ``package control``
+               (``asky`` is dead for now)
+               ``faker`` working again
+            Mention instructions for package control
+         Copy key files from ``dotfiles`` repo
+            - currency.ini
+            - cvt.ini
+            - ditto.ini
+            - easysearch.ini
+            - goggalaxy.ini
+            - Keypirinha.ini
+            - my-conversions.json
+            - zealous.ini
       JetBrains Toolbox: https://www.jetbrains.com/toolbox-app/
       Dexpot: https://dexpot.de/index.php?id=download
+         Add to startup via Run (Win+R) -> ``shell:startup``
       1Password: https://my.1password.com/apps
       PicPick: https://picpick.app/en/
       ShareX: https://getsharex.com/
       Docker Desktop: https://www.docker.com/products/docker-desktop
-      Directory Opus
+      Directory Opus: https://www.gpsoft.com.au/DScripts/download.asp
+         Restore from backup file
+         Install certificate from file (search Gmail for 'Opus' to find the attached cert file)
+      VoiceMeeter Banana
       OBS: https://obsproject.com/
+      StreamLabs desktop software (forgot the name)
+      Snaz
       Fences 3
+      Screen saver
    Installing stuff for WSL and Windows Terminal
       Powerline fonts: https://github.com/powerline/fonts
          Clone repo (currently in ``D:\dev\fonts\``)
@@ -92,8 +118,8 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
          Just the ones under ``fonts\ttf\``
       ``pip install sphinx``
       ``pip install sphinx-rtd-theme``
-      Git for Windows
-      VoiceMeeter Banana
+      Git for Windows: https://git-scm.com/downloads
+         Accept all defaults during installation
    Install hardware drivers
       Razer keyboard & mouse: https://www.razer.com/synapse-3
       Logitech Webcam: https://support.logi.com/hc/en-us/articles/360024699934--Downloads-C922-Pro-Stream-Webcam
@@ -101,6 +127,7 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
          OPTIONAL: Logitech Capture
          OPTIONAL: Camera Settings
       Stream Deck: https://www.elgato.com/en/downloads
+         Restore from backup file
    Remove Skype from Settings (not Control Panel)
       Settings (Win+I) -> Personalization -> Taskbar -> Turn system icons on or off
          Volume

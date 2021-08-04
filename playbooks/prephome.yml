@@ -161,6 +161,7 @@
         - dest: "~/.dotfiles"
           home: "/mnt/c/Keypirinha/portable/Profile/User"
           files:
+            - currency.ini
             - cvt.ini
             - ditto.ini
             - easysearch.ini
