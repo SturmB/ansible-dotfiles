@@ -104,10 +104,19 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       Virtual Audio Cable: https://vb-audio.com/Cable/index.htm
       VoiceMeeter Banana: https://vb-audio.com/Voicemeeter/banana.htm
       OBS: https://obsproject.com/
-      StreamLabs desktop software (forgot the name)
-      Fences 3
-      Snaz
+      StreamLabels: https://streamlabs.com/dashboard#/streamlabels
+         Set output directory to ``C:\Users\sturm\OneDrive\Documents\StreamLabels``
+      Snaz: https://github.com/JimmyAppelt/Snaz/releases
+         refer to text files on flash drive for settings
       iTunes
+      Parsec
+         To run on startup, right-click task tray icon and make sure "Run when my computer starts" is checked. (https://support.parsec.app/hc/en-us/articles/115002702331-Setting-Up-Hosting-On-Windows)
+      Viscosity: https://www.sparklabs.com/viscosity/
+         License info is in Gmail; just search for "Viscosity". Enter it in Preferences -> About.
+         Get a custom OpenVPN config: https://torguard.net/tgconf.php?action=vpn-openvpnconfig
+         Use generated username/password in account settings (or generate a new set)
+      Fences 3
+      PlexAmp
    Installing stuff for WSL and Windows Terminal
       Powerline fonts: https://github.com/powerline/fonts
          Clone repo (currently in ``D:\dev\fonts\``)
@@ -130,10 +139,24 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       Razer keyboard & mouse: https://www.razer.com/synapse-3
       Logitech Webcam: https://support.logi.com/hc/en-us/articles/360024699934--Downloads-C922-Pro-Stream-Webcam
          G Hub
-         OPTIONAL: Logitech Capture
-         OPTIONAL: Camera Settings
+         OPTIONAL?: Logitech Capture
+         OPTIONAL?: Camera Settings
       Stream Deck: https://www.elgato.com/en/downloads
          Restore from backup file
+         Add accounts in Preferences -> Accounts
+            StreamLabs
+            Twitch
+            Twitter
+            YouTube
+         Make sure OBS button points to correct location
+         Make sure Twitter Account is correct on its button
+         Install plugins
+            Philips Hue
+            VoiceMeeter Integration
+            Audio Switcher
+            OBS Tools (BarRaider)
+               Make sure to install ``obs-websocket``: https://github.com/Palakis/obs-websocket/releases
+            Timestamp
    Remove Skype from Settings (not Control Panel)
       Settings (Win+I) -> Personalization -> Taskbar -> Turn system icons on or off
          Volume
