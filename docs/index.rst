@@ -12,9 +12,9 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
    :numbered:
    :caption: Contents:
 
+   update-software
+
 ..
-   Update Windows (reboot)
-   Update Alienware software (reboot?)
    Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
       Enable WSL
          Turn on WSL

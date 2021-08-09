@@ -1,5 +1,6 @@
 {
   "files.associations": {
     "*.yml": "ansible"
-  }
+  },
+  "restructuredtext.confPath": "${workspaceFolder}/docs"
 }
