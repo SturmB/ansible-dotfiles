@@ -115,7 +115,16 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
          License info is in Gmail; just search for "Viscosity". Enter it in Preferences -> About.
          Get a custom OpenVPN config: https://torguard.net/tgconf.php?action=vpn-openvpnconfig
          Use generated username/password in account settings (or generate a new set)
-      Fences 3
+      Adobe Creative Cloud: https://creativecloud.adobe.com/cc/
+         Set location to ``D:\Adobe`` before installing any apps
+         Get and install ``Russo One`` font family: https://fonts.google.com/specimen/Russo+One
+      Fences 3: https://www.stardock.com/products/fences/download-trial
+         Product Key can be found on Humble Bundle: https://www.humblebundle.com/home/library
+         Copy snapshots from old ``%APPDATA%\Stardock\Fences`` location to new: https://forums.joeuser.com/482026/how-to-backup-and-restore-fences
+      TeraCopy
+      MusicBrainz Picard
+      Tag & Rename
+      dottorrent (torrent file creator from Red)
       PlexAmp
    Installing stuff for WSL and Windows Terminal
       Powerline fonts: https://github.com/powerline/fonts
@@ -157,6 +166,8 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
             OBS Tools (BarRaider)
                Make sure to install ``obs-websocket``: https://github.com/Palakis/obs-websocket/releases
             Timestamp
+      Oculus Rift
+      Canon (CanoScan LiDE 300) IJxxxx? scanner driver + software?
    Remove Skype from Settings (not Control Panel)
       Settings (Win+I) -> Personalization -> Taskbar -> Turn system icons on or off
          Volume
