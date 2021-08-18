@@ -7,7 +7,7 @@
     "url": "https://github.com/SturmB/ansible-dotfiles/issues"
   },
   "devDependencies": {
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.2"
   },
   "homepage": "https://github.com/SturmB/ansible-dotfiles#readme",
   "keywords": [
