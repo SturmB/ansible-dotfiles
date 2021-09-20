@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "make: html",
+      "type": "shell",
+      "command": "make --directory ./docs html",
+      "problemMatcher": [],
+      "detail": "Build HTML from reStructuredText files",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    }
+  ]
+}
