@@ -6,7 +6,7 @@
 New PC Setup
 ============
 
-These are instructions for setting up a brand-new Windows 10+ PC to just the way I like it.
+These are instructions for setting up a brand-new Windows 10+ PC to just the way I like it. This entire procedure could take an entire day, so make sure to either set aside a block of time to work on it or separate it out into more manageable chunks of time. For example, only install and set up Chrome today, then worry about install WSL tomorrow.
 
 .. toctree::
    :numbered:

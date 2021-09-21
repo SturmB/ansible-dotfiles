@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Windows Subsystem for Linux &mdash; New PC Setup 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> New PC Setup
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="update-software.html">1. Update Software</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">New PC Setup</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Windows Subsystem for Linux</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/wsl.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="windows-subsystem-for-linux">
+<h1>Windows Subsystem for Linux<a class="headerlink" href="#windows-subsystem-for-linux" title="Permalink to this headline"></a></h1>
+<p>This process will download all necessary components for the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a> and install them. For the linux operating system, it will install Ubuntu, then customize the shell exactly how I like it. It will also install Windows Terminal and customize it. Finally, if keeping WSL on the main <code class="docutils literal notranslate"><span class="pre">C:</span></code> drive is unfeasible (due to how large it can become), instructions are included at the bottom for moving it to a different location.</p>
+<p>For most of the steps listed below, you can follow the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">official instructions</a> instead. In fact, it is likely that they will be kept more up-to-date than these instructions. For instructions that are <em>not</em> in the aforementioned link, look for some special mark that I’ll decide upon later.</p>
+<div class="section" id="enable-wsl">
+<h2>Enable WSL<a class="headerlink" href="#enable-wsl" title="Permalink to this headline"></a></h2>
+<p>The first step to installing WSL is to turn on the necessary components. this can easily be done in PowerShell.</p>
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span>wsl --install
+</pre></div>
+</div>
+<p>Just make sure to restart the computer after a successful run of this command.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a version of Windows 10 older than 2004 is used, there are other commands that must be run instead. It is a more ‘manual’ method of installing WSL and bringing it up to WSL2 standards. Since I will almost certainly be using Windows 10 v2004 or later for all my future installations of WSL, I see no need to include the manual instructions here. Please refer to <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">the official instructions</a> for them if needed.</p>
+</div>
+</div>
+<div class="section" id="first-steps-with-wsl">
+<h2>First Steps with WSL<a class="headerlink" href="#first-steps-with-wsl" title="Permalink to this headline"></a></h2>
+<p>Before installing Windows Terminal, start up Ubuntu for the first time by running the new shortcut in the Start menu and/or desktop labeled <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code>. This will finalize Ubuntu’s installation and require you to create a username and password for the default user of Ubuntu. After this is done, feel free to type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to leave this built-in Ubuntu terminal, as we will be installing a much better terminal software to access WSL.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Chris McGee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
