@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Windows Subsystem for Linux &mdash; New PC Setup 1.0.0 documentation</title>
+  <title>2. Windows Subsystem for Linux &mdash; New PC Setup 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,7 +16,8 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="1. Update Software" href="update-software.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,8 +36,14 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="update-software.html">1. Update Software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Windows Subsystem for Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enable-wsl">2.1. Enable WSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-steps-with-wsl">2.2. First Steps with WSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-wsl-to-another-location-optional">2.3. Moving WSL to another location (Optional)</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -53,7 +60,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Windows Subsystem for Linux</li>
+      <li><span class="section-number">2. </span>Windows Subsystem for Linux</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/wsl.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -64,11 +71,11 @@
            <div itemprop="articleBody">
              
   <div class="section" id="windows-subsystem-for-linux">
-<h1>Windows Subsystem for Linux<a class="headerlink" href="#windows-subsystem-for-linux" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">2. </span>Windows Subsystem for Linux<a class="headerlink" href="#windows-subsystem-for-linux" title="Permalink to this headline"></a></h1>
 <p>This process will download all necessary components for the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a> and install them. For the linux operating system, it will install Ubuntu, then customize the shell exactly how I like it. It will also install Windows Terminal and customize it. Finally, if keeping WSL on the main <code class="docutils literal notranslate"><span class="pre">C:</span></code> drive is unfeasible (due to how large it can become), instructions are included at the bottom for moving it to a different location.</p>
-<p>For most of the steps listed below, you can follow the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install">official instructions</a> instead. In fact, it is likely that they will be kept more up-to-date than these instructions. For instructions that are <em>not</em> in the aforementioned link, look for some special mark that I’ll decide upon later.</p>
+<p>For most of the steps listed below, you can follow the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/setup/environment">official tutorial</a> instead. In fact, it is likely that they will be kept more up-to-date than these instructions. For instructions that are <em>not</em> in the aforementioned link, look for some special mark that I’ll decide upon later.</p>
 <div class="section" id="enable-wsl">
-<h2>Enable WSL<a class="headerlink" href="#enable-wsl" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">2.1. </span>Enable WSL<a class="headerlink" href="#enable-wsl" title="Permalink to this headline"></a></h2>
 <p>The first step to installing WSL is to turn on the necessary components. this can easily be done in PowerShell.</p>
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span>wsl --install
 </pre></div>
@@ -80,15 +87,40 @@
 </div>
 </div>
 <div class="section" id="first-steps-with-wsl">
-<h2>First Steps with WSL<a class="headerlink" href="#first-steps-with-wsl" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">2.2. </span>First Steps with WSL<a class="headerlink" href="#first-steps-with-wsl" title="Permalink to this headline"></a></h2>
+<p>Just in case the one-line installation command above doesn’t already do so, we can manually set Ubuntu to use version 2 of WSL. This may also be necessary for any future distributions that get installed.</p>
+<p>First, however, check to see which version the distro is using.</p>
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span>wsl -l -v
+</pre></div>
+</div>
+<p>If the version comes back with 1, then make sure to change it to 2.</p>
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span>wsl --set-version &lt;distributionName&gt; &lt;versionNumber&gt;
+</pre></div>
+</div>
+<p>So use <code class="docutils literal notranslate"><span class="pre">2</span></code> for the <code class="docutils literal notranslate"><span class="pre">versionNumber</span></code> and <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code> for the <code class="docutils literal notranslate"><span class="pre">distributionName</span></code> in the above command to make sure Ubuntu uses WSL2.</p>
 <p>Before installing Windows Terminal, start up Ubuntu for the first time by running the new shortcut in the Start menu and/or desktop labeled <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code>. This will finalize Ubuntu’s installation and require you to create a username and password for the default user of Ubuntu. After this is done, feel free to type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to leave this built-in Ubuntu terminal, as we will be installing a much better terminal software to access WSL.</p>
+<p>After all of the initial setup, we can install <a class="reference external" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">Windows Terminal</a> from the Microsoft Store. It should automatically pick up the Ubuntu WSL2 installation and add it to the list of tabs you can open. Don’t worry if it doesn’t look correct yet; that will be changed when we install the dotfiles repository.</p>
+<p>Now would be a good time to study the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/basic-commands">basic WSL commands</a> that are available in case you should need them in the future.</p>
+</div>
+<div class="section" id="moving-wsl-to-another-location-optional">
+<h2><span class="section-number">2.3. </span>Moving WSL to another location (Optional)<a class="headerlink" href="#moving-wsl-to-another-location-optional" title="Permalink to this headline"></a></h2>
+<p>By default, WSL installs itself to the <code class="docutils literal notranslate"><span class="pre">C:</span></code> drive. Every file that is added to WSL takes up space on that drive. Since we may be using a relatively small m.2 NVMe drive for <code class="docutils literal notranslate"><span class="pre">C:</span></code>, space may be at a premium there while another drive (<code class="docutils literal notranslate"><span class="pre">D:</span></code>, <code class="docutils literal notranslate"><span class="pre">E:</span></code>, etc.) might have plenty of free space. If this is the case, then it might be a better idea to move the WSL installation to that other drive. Here are some resources for making that happen.</p>
+<ul class="simple">
+<li><p>First, you will need a <a class="reference external" href="https://github.com/microsoft/WSL/issues/4699#issuecomment-660104214">simple set of instructions for moving the WSL installation</a></p></li>
+<li><p>It might be helpful to see <a class="reference external" href="https://github.com/MicrosoftDocs/WSL/issues/412#issuecomment-575923176">an example that uses those instructions</a> (more or less)</p></li>
+<li><p>You may need to <a class="reference external" href="https://askubuntu.com/a/966537">change the default user</a> during this process</p></li>
+<li><p>There are also <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config#change-the-default-user-for-a-distribution">official Microsoft instructions</a> for changing the default user, but these are currently offline as of this writing</p></li>
+<li><p>Rarely, WSL might already be in another location (such as a <code class="docutils literal notranslate"><span class="pre">D:</span></code> drive) and a fresh installation of Windows needs to “see” it. This can be done by <a class="reference external" href="https://github.com/microsoft/WSL/issues/4762#issuecomment-578545574">re-registering</a> it.</p></li>
+</ul>
 </div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="update-software.html" class="btn btn-neutral float-left" title="1. Update Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
