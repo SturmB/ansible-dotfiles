@@ -13,6 +13,7 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
    :caption: Contents:
 
    update-software
+   foundation
    wsl
 
 ..
@@ -41,6 +42,7 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
          QuickLook
          iConvert Icons
    Install other software
+      Install VS Code: https://code.visualstudio.com/
       Dropbox: https://www.dropbox.com/downloading
       TextExpander: https://textexpander.com/download
       Discord: https://discord.com/
