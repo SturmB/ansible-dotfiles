@@ -13,6 +13,7 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
    :caption: Contents:
 
    update-software
+   wsl
 
 ..
    Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
