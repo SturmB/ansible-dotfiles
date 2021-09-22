@@ -16,25 +16,6 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
    wsl
 
 ..
-   Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
-      Enable WSL
-         Turn on WSL
-         Virtual Machine
-         HyperVisor (reboot)
-      Download the Linux kernel update package: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-      Set WSL 2 as the default version: ``wsl --set-default-version 2``
-      Install Ubuntu from Microsoft Store
-      Install Windows Terminal from Microsoft Store
-         Windows Terminal settings will be updated with dotfiles
-      Set distro to WSL 2 if necessary: ``wsl --set-version <distribution name> <versionNumber>``
-         Can check first with ``wsl -l -v``
-      Handy list of WSL commands: https://docs.microsoft.com/en-us/windows/wsl/wsl-config
-      OPTIONAL: Move WSL to another location
-         Instructions: https://github.com/microsoft/WSL/issues/4699#issuecomment-660104214
-         An example: https://github.com/MicrosoftDocs/WSL/issues/412#issuecomment-575923176
-         How to change default user: https://askubuntu.com/a/966537
-         and: https://docs.microsoft.com/en-us/windows/wsl/wsl-config#change-the-default-user-for-a-distribution
-      OPTIONAL: If WSL is already in another location and needs to be 're-registered', instructions can be found here: https://github.com/microsoft/WSL/issues/4762#issuecomment-578545574
    Change File Explorer's View Mode
       View->Options->View tab->
          Select ``Show hidden files, folders, and drives``
