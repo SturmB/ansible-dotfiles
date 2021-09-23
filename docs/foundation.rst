@@ -2,7 +2,7 @@
 Foundation and Microsoft Store
 ##############################
 
-Once all of the basic operating system software has been updated, it's time to set some foundation configurations.
+Once all of the basic operating system software has been updated and hardware drivers have been installed, it's time to set some foundation configurations.
 
 *************
 File Explorer
