@@ -42,6 +42,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Foundation and Microsoft Store</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#file-explorer">2.1. File Explorer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#web-browser">2.2. Web Browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-apps">2.3. Windows Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="wsl.html">3. Windows Subsystem for Linux</a></li>
@@ -83,7 +84,27 @@
 <p>Since it is likely that we will want to use Google Chrome rather than Microsoft Edge, visit the <a class="reference external" href="https://www.google.com/chrome/">Chrome download page</a> using Edge, download the browser, and install it.</p>
 <p>Once it is installed, sign in with our Google account and all of the bookmarks, extensions, etc. will be immediately be synchronized to the computer. Most of the extensions are self-explanatory. Some of them require signing in (Such as <a class="reference external" href="https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa?hl=en">1Password</a> and <a class="reference external" href="https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en">Momentum</a>), but these shouldn’t present a problem, especially once <cite>1Password</cite> is installed.</p>
 <p>One extension that bears special mention is <a class="reference external" href="https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai?hl=en">Chrome Remote Desktop</a>. Once it is installed, you can browse to <a class="reference external" href="https://remotedesktop.google.com/">https://remotedesktop.google.com/</a> and set up remote access.</p>
-<p>One other extension that requires a bit of special setup is <a class="reference external" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Tampermonkey</a>. If I’ve been doing things well, I’ve backed up my scripts to Google Drive, so we’ll just need to restore them.</p>
+<p>One other extension that requires a bit of special setup is <a class="reference external" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Tampermonkey</a>. If I’ve been as vigilant as I should be, I’ve exported backups of my scripts to Google Drive each time I made a change to them, so we’ll just need to restore them.</p>
+<p>This can be done by going to the Tampermonkey <span class="menuselection">dashboard ‣ Utilities tab ‣ Cloud</span> and clicking the <span class="guilabel">Show backups</span> button. We’ll probably need to sign in (or confirm which Google account we want to use), then a list of backups will be shown.</p>
+</div>
+<div class="section" id="windows-apps">
+<h2><span class="section-number">2.3. </span>Windows Apps<a class="headerlink" href="#windows-apps" title="Permalink to this headline"></a></h2>
+<p>Now is as good a time as any to install the various <abbr title="Universal Windows Platform">UWP</abbr> apps from the Microsoft Store.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/yubico-authenticator/9nfng39387k0">Yubico Authenticator</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp">EarTrumpet</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/foobar2000/9pdj8x9spf2k">foobar2000</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/evernote/9wzdncrfj3mb">Evernote</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/tweeten/9nblggh52xbx">Tweeten</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/ditto-clipboard/9nblggh3zbjq">Ditto Clipboard</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/slack/9wzdncrdk3wp">Slack</a></p></li>
+<li><p>Optional: <a class="reference external" href="https://www.microsoft.com/en-us/p/ring-always-home/9nblggh1qwd4">Ring - Always Home</a></p></li>
+<li><p>Optional: <a class="reference external" href="https://www.microsoft.com/en-us/p/quicklook/9nv4bs3l1h4s">QuickLook</a></p></li>
+<li><p>Optional: <a class="reference external" href="https://www.microsoft.com/en-us/p/iconvert-icons/9pps5snxx82q">iConvert Icons</a></p></li>
+</ul>
+<p>We want the Yubico Authenticator to run when Windows starts, but it doesn’t have any built-in setting to do so. Therefore, we will need to place it in the <code class="file docutils literal notranslate"><span class="pre">startup</span></code> folder manually.</p>
+<p>To do this, launch the Run window with <kbd class="kbd docutils literal notranslate">Win</kbd> + <kbd class="kbd docutils literal notranslate">R</kbd> and run <strong class="command">shell:startup</strong>. Then open a new Windows Explorer window and navigate to <code class="file docutils literal notranslate"><span class="pre">C:Program</span> <span class="pre">FilesWindowsAppsYubicoAB.YubicoAuthenticator_</span><em><span class="pre">5.0.5.0</span></em><span class="pre">_x64__pjam772p9bs2gVFSProgramFilesX64YubicoYubico</span> <span class="pre">Authenticator</span></code>. (The version number in that path might be different by the time you read this, so you may need to navigate there manually rather than copy/pasting that path.) Then drag a shortcut of <code class="file docutils literal notranslate"><span class="pre">yubioath-desktop.exe</span></code> to the startup folder.</p>
+<p>It would also be beneficial to start the Authenticator minimized. This can be done in the app itself: <span class="menuselection">&lt;menu button&gt; ‣ Application ‣ System tray ‣ Hide on launch</span>.</p>
 </div>
 </div>
 

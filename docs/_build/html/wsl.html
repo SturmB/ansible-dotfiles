@@ -42,7 +42,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Windows Subsystem for Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#enable-wsl">3.1. Enable WSL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#first-steps-with-wsl">3.2. First Steps with WSL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#moving-wsl-to-another-location-optional">3.3. Moving WSL to another location (Optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-wsl-to-another-location-optional">3.3. Moving WSL to another location <em>(Optional)</em></a></li>
 </ul>
 </li>
 </ul>
@@ -99,12 +99,12 @@
 </pre></div>
 </div>
 <p>So use <code class="docutils literal notranslate"><span class="pre">2</span></code> for the <code class="docutils literal notranslate"><span class="pre">versionNumber</span></code> and <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code> for the <code class="docutils literal notranslate"><span class="pre">distributionName</span></code> in the above command to make sure Ubuntu uses WSL2.</p>
-<p>Before installing Windows Terminal, start up Ubuntu for the first time by running the new shortcut in the Start menu and/or desktop labeled <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code>. This will finalize Ubuntu’s installation and require you to create a username and password for the default user of Ubuntu. After this is done, feel free to type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to leave this built-in Ubuntu terminal, as we will be installing a much better terminal software to access WSL.</p>
-<p>After all of the initial setup, we can install <a class="reference external" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">Windows Terminal</a> from the Microsoft Store. It should automatically pick up the Ubuntu WSL2 installation and add it to the list of tabs you can open. Don’t worry if it doesn’t look correct yet; that will be changed when we install the dotfiles repository.</p>
+<p>Before installing Windows Terminal, start up Ubuntu for the first time by running the new shortcut in the Start menu and/or desktop labeled <span class="guilabel">Ubuntu</span>. This will finalize Ubuntu’s installation and require you to create a username and password for the default user of Ubuntu. After this is done, feel free to type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to leave this built-in Ubuntu terminal, as we will be installing a much better terminal software to access WSL.</p>
+<p>After all of the initial setup, we can install <a class="reference external" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701">Windows Terminal</a> from the Microsoft Store. It should automatically pick up the Ubuntu WSL2 installation and add it to the list of tabs you can open. Don’t worry if it doesn’t look correct yet; that will be changed when we install the dotfiles repository.</p>
 <p>Now would be a good time to study the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/basic-commands">basic WSL commands</a> that are available in case you should need them in the future.</p>
 </div>
 <div class="section" id="moving-wsl-to-another-location-optional">
-<h2><span class="section-number">3.3. </span>Moving WSL to another location (Optional)<a class="headerlink" href="#moving-wsl-to-another-location-optional" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.3. </span>Moving WSL to another location <em>(Optional)</em><a class="headerlink" href="#moving-wsl-to-another-location-optional" title="Permalink to this headline"></a></h2>
 <p>By default, WSL installs itself to the <code class="docutils literal notranslate"><span class="pre">C:</span></code> drive. Every file that is added to WSL takes up space on that drive. Since we may be using a relatively small m.2 NVMe drive for <code class="docutils literal notranslate"><span class="pre">C:</span></code>, space may be at a premium there while another drive (<code class="docutils literal notranslate"><span class="pre">D:</span></code>, <code class="docutils literal notranslate"><span class="pre">E:</span></code>, etc.) might have plenty of free space. If this is the case, then it might be a better idea to move the WSL installation to that other drive. Here are some resources for making that happen.</p>
 <ul class="simple">
 <li><p>First, you will need a <a class="reference external" href="https://github.com/microsoft/WSL/issues/4699#issuecomment-660104214">simple set of instructions for moving the WSL installation</a></p></li>

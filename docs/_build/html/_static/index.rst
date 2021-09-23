@@ -17,30 +17,6 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
    wsl
 
 ..
-   Change File Explorer's View Mode
-      View->Options->View tab->
-         Select ``Show hidden files, folders, and drives``
-         Un-check ``Hide extensions for known file types``
-   Install Chrome
-      Sign in to Google account
-      Set up Chrome Remote Desktop
-      Restore Tampermonkey scripts from Google Drive
-   Install VS Code: https://code.visualstudio.com/
-   Install Microsoft Store software
-      Yubico Authenticator
-         Add to startup via Run (Win+R) -> ``shell:startup``
-         ``C:\Program Files\WindowsApps\YubicoAB.YubicoAuthenticator_5.0.5.0_x64__pjam772p9bs2g\VFS\ProgramFilesX64\Yubico\Yubico Authenticator``
-      EarTrumpet
-      foobar2000
-      Evernote
-      Evernote Web Clipper
-      Tweeten
-      Ditto Clipboard
-      Slack
-      Optional
-         Ring - Always Home
-         QuickLook
-         iConvert Icons
    Install other software
       Install VS Code: https://code.visualstudio.com/
       Dropbox: https://www.dropbox.com/downloading
