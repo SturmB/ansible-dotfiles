@@ -12,11 +12,11 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
    :numbered:
    :caption: Contents:
 
-   update-software
+   update-os
    drivers
    foundation
    wsl
-
+   software
 ..
    Install other software
       Install VS Code: https://code.visualstudio.com/

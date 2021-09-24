@@ -1,6 +1,6 @@
-###############
-Update Software
-###############
+#######################
+Update Operating System
+#######################
 
 After getting Windows fully installed—whether through a store-bought copy, an included copy with a brand new hard drive, or by restoring a prefab computer back to factory defaults—it needs to be updated.
 
