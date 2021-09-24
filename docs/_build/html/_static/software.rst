@@ -1,33 +1,78 @@
-.. New PC Setup documentation master file, created by
-   sphinx-quickstart on Sun Aug  1 15:00:41 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+#####################
+Software Installation
+#####################
 
-New PC Setup
-============
+With all of the most important pieces of this setup process out of the way, we can finally slow down and take our time installing various pieces of software. None of these are critical to the operation of the computer, but are necessary for my usual day-to-day tasks.
 
-These are instructions for setting up a brand-new Windows 10+ PC to just the way I like it. This entire procedure could take an entire day, so make sure to either set aside a block of time to work on it or separate it out into more manageable chunks of time. For example, only install and set up Chrome today, then worry about install WSL tomorrow.
+To make it easier to go through this rather gargantuan list, I have divided them up into three sections:
 
-.. toctree::
-   :numbered:
-   :caption: Contents:
+.. contents::
+   :local:
+   :depth: 1
 
-   update-os
-   drivers
-   foundation
-   wsl
-   software
+For each of the software packages, a link to the package's home page or download page is provided in the section title. In addition, most of the software will require signing in with the appropriate credentials. As always, :title-reference:`1Password` is our friend.
+
+Since these aren't critical, don't feel like they need to be installed in one day. Split them up by the three main categories, one for each day, if you like. Or just jump around the list and install them in whatever order you wish.
+
+*********
+Utilities
+*********
+
+First up are the many various utility-type software that we will need to install.
+
+`VS Code <https://code.visualstudio.com/>`__
+============================================
+
+My preferred text editor + code editor.
+
+// TODO: Add instructions for signing in with GitHub account and syncing extensions.
+
+`Dropbox <https://www.dropbox.com/downloading>`__
+=================================================
+
+We will always need the ability to keep a set of files that can be accessed anywhere.
+
+`TextExpander <https://textexpander.com/download>`__
+====================================================
+
+Very handy utility for expanding shorthand snippets into much longer strings of text.
+
+`Discord <https://discord.com/>`__
+==================================
+
+Social media software for keeping in touch with friends and family.
+
+`Everything <https://www.voidtools.com/>`__
+===========================================
+
+Superior search tool to anything Microsoft can provide.
+
+During installation, make sure that it will **install folder context menus**. Also, if it didn't ask about checking for updates on startup during its installation, launch it and go to :menuselection:`Tools --> Options --> General` and check the box for :guilabel:`Check for updates on startup`.
+
+.. note::
+   You may need to launch :title-reference:`Everything` elevated in order to make these changes *stick*.
+
+`7-Zip <https://www.7-zip.org/>`__
+==================================
+
+The all-in-one zip management program. I find it to be superior to WinRAR and, obviously, Windows' built-in zip file manager.
+
+After installation, run it as admin, then go to :menuselection:`Tools --> Options --> System --> Associate 7-Zip with:` and click the first :guilabel:`+` button, which will make the associations for current user only.
+
+******
+Gaming
+******
+
+Gaming platforms, stores, and even the games themselves
+
+*********
+Streaming
+*********
+
+Software related specifically to streaming on Twitch
+
 ..
    Install other software
-      Install VS Code: https://code.visualstudio.com/
-      Dropbox: https://www.dropbox.com/downloading
-      TextExpander: https://textexpander.com/download
-      Discord: https://discord.com/
-      Everything: https://www.voidtools.com/
-         * Check for updates on startup
-         * Install folder context menus
-      7-Zip: https://www.7-zip.org/
-         Run as admin->Tools->Options->System->Associate 7-Zip with: first + button (for current user only)
       Steam: https://store.steampowered.com/about/
          Steam -> Steam menu -> Settings -> Downloads -> Steam Library Folders
       GOG Galaxy: https://www.gog.com/galaxy
@@ -103,28 +148,3 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       Tag & Rename
       dottorrent (torrent file creator from Red)
       PlexAmp
-   Installing stuff for WSL and Windows Terminal
-      Powerline fonts: https://github.com/powerline/fonts
-         Clone repo (currently in ``D:\dev\fonts\``)
-         Run ``Set-ExecutionPolicy Bypass``
-         Then ``.\install.ps1``
-         Finally ``Set-ExecutionPolicy Default``
-      Nerd Fonts: https://www.nerdfonts.com/
-         Meslo LG Nerd Font
-         JetBrainsMono Nerd Font
-      PxPlus fonts: https://int10h.org/oldschool-pc-fonts/download/
-         Download only the Windows fonts
-         ``ttf - Px (pixel outline)\PxPlus_IBM_VGA_8x16.ttf``
-      JetBrains Mono font: https://www.jetbrains.com/lp/mono/
-         Just the ones under ``fonts\ttf\``
-      ``pip install sphinx``
-      ``pip install sphinx-rtd-theme``
-      Git for Windows: https://git-scm.com/downloads
-         Accept all defaults during installation
-   Remove Skype from Settings (not Control Panel)
-      Settings (Win+I) -> Personalization -> Taskbar -> Turn system icons on or off
-         Volume
-         Power
-         Meet Now
-      Settings (Win+I) -> Personalization -> Taskbar -> Select which icons appear on the taskbar
-         EarTrumpet
