@@ -2,7 +2,7 @@
 Foundation and Microsoft Store
 ##############################
 
-Once all of the basic operating system software has been updated, it's time to set some foundation configurations.
+Once all of the basic operating system software has been updated and hardware drivers have been installed, it's time to set some foundation configurations.
 
 *************
 File Explorer
@@ -43,6 +43,6 @@ Now is as good a time as any to install the various :abbr:`UWP (Universal Window
 
 We want the Yubico Authenticator to run when Windows starts, but it doesn't have any built-in setting to do so. Therefore, we will need to place it in the :file:`startup` folder manually.
 
-To do this, launch the Run window with :kbd:`Win` + :kbd:`R` and run :command:`shell:startup`. Then open a new Windows Explorer window and navigate to :file:`C:\Program Files\WindowsApps\YubicoAB.YubicoAuthenticator_{5.0.5.0}_x64__pjam772p9bs2g\VFS\ProgramFilesX64\Yubico\Yubico Authenticator`. (The version number in that path might be different by the time you read this, so you may need to navigate there manually rather than copy/pasting that path.) Then drag a shortcut of :file:`yubioath-desktop.exe` to the startup folder.
+To do this, launch the Run window with :kbd:`Win` + :kbd:`R` and run :command:`shell:startup`. Then open a new Windows Explorer window and navigate to :file:`C:\\Program Files\\WindowsApps\\YubicoAB.YubicoAuthenticator_{5.0.5.0}_x64__pjam772p9bs2g\\VFS\\ProgramFilesX64\\Yubico\\Yubico Authenticator`. (The version number in that path might be different by the time you read this, so you may need to navigate there manually rather than copy/pasting that path.) Then drag a shortcut of :file:`yubioath-desktop.exe` to the startup folder.
 
 It would also be beneficial to start the Authenticator minimized. This can be done in the app itself: :menuselection:`<menu button> --> Application --> System tray --> Hide on launch`.

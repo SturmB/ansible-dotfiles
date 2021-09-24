@@ -13,6 +13,7 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
    :caption: Contents:
 
    update-software
+   drivers
    foundation
    wsl
 
@@ -64,6 +65,22 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       Virtual Audio Cable: https://vb-audio.com/Cable/index.htm
       VoiceMeeter Banana: https://vb-audio.com/Voicemeeter/banana.htm
       OBS: https://obsproject.com/
+      Stream Deck setup
+         Restore from backup file
+         Add accounts in Preferences -> Accounts
+            StreamLabs
+            Twitch
+            Twitter
+            YouTube
+         Make sure OBS button points to correct location
+         Make sure Twitter Account is correct on its button
+         Install plugins
+            Philips Hue
+            VoiceMeeter Integration
+            Audio Switcher
+            OBS Tools (BarRaider)
+               Make sure to install ``obs-websocket``: https://github.com/Palakis/obs-websocket/releases
+            Timestamp
       StreamLabels: https://streamlabs.com/dashboard#/streamlabels
          Set output directory to ``C:\Users\sturm\OneDrive\Documents\StreamLabels``
       Snaz: https://github.com/JimmyAppelt/Snaz/releases
@@ -104,30 +121,6 @@ These are instructions for setting up a brand-new Windows 10+ PC to just the way
       ``pip install sphinx-rtd-theme``
       Git for Windows: https://git-scm.com/downloads
          Accept all defaults during installation
-   Install hardware drivers
-      Razer keyboard & mouse: https://www.razer.com/synapse-3
-      Logitech Webcam: https://support.logi.com/hc/en-us/articles/360024699934--Downloads-C922-Pro-Stream-Webcam
-         G Hub
-         OPTIONAL?: Logitech Capture
-         OPTIONAL?: Camera Settings
-      Stream Deck: https://www.elgato.com/en/downloads
-         Restore from backup file
-         Add accounts in Preferences -> Accounts
-            StreamLabs
-            Twitch
-            Twitter
-            YouTube
-         Make sure OBS button points to correct location
-         Make sure Twitter Account is correct on its button
-         Install plugins
-            Philips Hue
-            VoiceMeeter Integration
-            Audio Switcher
-            OBS Tools (BarRaider)
-               Make sure to install ``obs-websocket``: https://github.com/Palakis/obs-websocket/releases
-            Timestamp
-      Oculus Rift
-      Canon (CanoScan LiDE 300) IJxxxx? scanner driver + software?
    Remove Skype from Settings (not Control Panel)
       Settings (Win+I) -> Personalization -> Taskbar -> Turn system icons on or off
          Volume
