@@ -4,7 +4,7 @@ Windows Subsystem for Linux
 
 This process will download all necessary components for the `Windows Subsystem for Linux <https://docs.microsoft.com/en-us/windows/wsl/install>`__ and install them. For the linux operating system, it will install Ubuntu, then customize the shell exactly how I like it. It will also install Windows Terminal and customize it. Finally, if keeping WSL on the main ``C:`` drive is unfeasible (due to how large it can become), instructions are included at the bottom for moving it to a different location.
 
-For most of the steps listed below, you can follow the `official tutorial <https://docs.microsoft.com/en-us/windows/wsl/setup/environment>`__ instead. In fact, it is likely that they will be kept more up-to-date than these instructions. For instructions that are *not* in the aforementioned link, look for some special mark that I'll decide upon later.
+For most of the steps listed below, you can follow the `official tutorial <https://docs.microsoft.com/en-us/windows/wsl/setup/environment>`__ instead. In fact, it is likely that they will be kept more up-to-date than these instructions.
 
 **********
 Enable WSL
