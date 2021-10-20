@@ -71,7 +71,49 @@ Keypirinha Packages
 
 Now comes all the packages to install. The list below contains all of the plugins that I use on a regular or even irregular basis.
 
-// TODO: Drop in the table from ``dotfiles`` repo.
+The first part of that process is to install the `Package Control <https://github.com/ueffel/Keypirinha-PackageControl>`__ app. To do so, follow `their instructions <https://github.com/ueffel/Keypirinha-PackageControl#directly-from-keypirinha>`__, or just press :kbd:`F2` and paste in the following:
+
+.. code-block:: javascript
+
+   import keypirinha as kp,keypirinha_net as kpn,os;p="PackageControl.keypirinha-package";d=kpn.build_urllib_opener().open("https://github.com/ueffel/Keypirinha-PackageControl/releases/download/1.0.4/"+p);pb=d.read();d.close();f=open(os.path.join(kp.installed_package_dir(),p),"wb");f.write(pb);f.close()
+
+From here, you should be able to install each of the plugins by launching Keypirinha (:kbd:`Alt` + :kbd:`Space`) and beginning to type "Install Package". Hit :kbd:`Tab` and begin typing the name of the plugin, then :kbd:`Enter`.
+
+// TODO: Fix up this list from ``dotfiles`` repo.
+
+4. Add [Keypirinha-Plugin-Kill](https://github.com/ueffel/Keypirinha-Plugin-Kill)
+5. Add [keypirinha-steam](https://github.com/EhsanKia/keypirinha-plugins/tree/master/keypirinha-steam) (for home only)
+6. Add [keypirinha-currency](https://github.com/AvatarHurden/keypirinha-currency)
+7. Add [Keypirinha-Plugin-Ditto](https://github.com/tuteken/Keypirinha-Plugin-Ditto) (requires additional setup)
+8. Add [keypirinha-lipsum](https://github.com/Fuhrmann/keypirinha-lipsum)
+9. Add [keypirinha-sharex](https://github.com/Fuhrmann/keypirinha-sharex)
+10. Add [Keypirinha-WindowsApps](https://github.com/ueffel/Keypirinha-WindowsApps)
+11. Add [keypirinha-gitmoji](https://github.com/Fuhrmann/keypirinha-gitmoji)
+12. ~~Add [keypirinha-faker-data](https://github.com/Fuhrmann/keypirinha-faker-data)~~ (currently broken)
+13. Add [keypirinha-moviedb](https://github.com/Fuhrmann/keypirinha-moviedb)
+14. Add [keypirinha-myip](https://github.com/Fuhrmann/keypirinha-myip)
+15. Add [keypirinha-winsys](https://github.com/kvnxiao/keypirinha-winsys)
+16. Add [Keypirinha-Time](https://github.com/ueffel/Keypirinha-Time)
+17. Add [keypirinha-cvt](https://github.com/DrorHarari/keypirinha-cvt)
+18. Add [keypirinha-phpdocsearch](https://github.com/Fuhrmann/keypirinha-phpdocsearch) (for a dev. PC)
+19. Add [keypirinha-volumecontrol](https://github.com/Fuhrmann/keypirinha-volumecontrol)
+20. Add [keypirinha-recent_items](https://github.com/s-oram/keypirinha-recent_items) (maybe)
+21. Add [keypirinha-ppl](https://github.com/DrorHarari/keypirinha-ppl) (maybe—requires additional setup)
+22. Add [keypirinha-asky](https://github.com/mawiseman/keypirinha-asky)
+23. Add [Keypirinha-EasySearch](https://github.com/bantya/Keypirinha-EasySearch) (requires additional setup)
+24. Add [Keypirinha-Zealous](https://github.com/bantya/Keypirinha-Zealous) (requires additional setup)
+25. Add [keypirinha-rdp](https://github.com/DrorHarari/keypirinha-rdp) (only if RDP is used)
+26. Add [Keypirinha-Command](https://github.com/bantya/Keypirinha-Command)
+27. Add [keypirinha-emojii](https://github.com/andriykrefer/keypirinha-emojii)
+28. ~~Add [keypirinha-epiclauncher](https://github.com/samusaran/keypirinha-epiclauncher) (for home only)~~ (currently broken)
+29. Add [keypirinha-stackoverflow](https://github.com/sergix/keypirinha-stackoverflow)
+30. Add [keypirinha-colorpicker](https://github.com/clinden/keypirinha-colorpicker)
+31. Add [Keypirinha-Updater](https://github.com/ueffel/Keypirinha-Updater)
+32. Add [keypirinha-git-fork](https://github.com/fran-f/keypirinha-git-fork) (for future use)
+33. ~~Add [keypirinha-goggalaxy](https://github.com/Torben2000/keypirinha-goggalaxy) (for home only, requires additional setup)~~ (I don't like the icons it creates)
+    * ~~Download & Install [WebP](https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html)~~
+
+In the future, feel free to visit the `full list <https://ue.spdns.de/packagecontrol/>`__ of various packages available to see if new ones are added or if any of them are deprecated.
 
 ******
 Gaming
