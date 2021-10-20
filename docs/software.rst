@@ -59,11 +59,53 @@ The all-in-one zip management program. I find it to be superior to WinRAR and, o
 
 After installation, run it as admin, then go to :menuselection:`Tools --> Options --> System --> Associate 7-Zip with:` and click the first :guilabel:`+` button, which will make the associations for current user only.
 
+`Keypirinha <https://keypirinha.com/download.html>`__
+=====================================================
+
+A fantastic speed utility for launching software as well as offering many handy utilities and shortcuts. It is extensible with a wide array of plugins, all of which I use are listed below. Before getting to those, however, we need to set up Keypirinha after installing it.
+
+Once this ``ansible-dotfiles`` repository has been cloned and the Ansible playbook run, there will be a new home directory called :file:`.dotfiles`. There are several files in its :file:`keypirinha` directory, but we only need one for the moment. Copy :file:`Keypirinha.ini` from that directory to :file:`C:\\Keypirinha\\portable\\Profile\\User`, overwriting the existing file, if there is one.
+
+Keypirinha Packages
+-------------------
+
+Now comes all the packages to install. The list below contains all of the plugins that I use on a regular or even irregular basis.
+
+// TODO: Drop in the table from ``dotfiles`` repo.
+
 ******
 Gaming
 ******
 
-Gaming platforms, stores, and even the games themselves
+Gaming platforms, stores, and even the games themselves.
+
+Game Storefronts
+================
+
+There are only three main digital storefronts that I use currently
+
+`Steam <https://store.steampowered.com/about/>`__
+-------------------------------------------------
+
+The juggernaught and my "primary" store for downloading games. Even if I can find the game elsewhere for the same price, I prefer to get it here simply due to its portability. Games can often be downloaded for more OSes than just Windows with a single purchase. And now that the Steam Deck has been released, nothing else compares.
+
+// TODO: flesh this out (library locations and directory names)
+
+Once downloaded and installed, the various game libraries will need to be set up. These can be found in the app under :menuselection:`Steam menu --> Settings --> Downloads --> Steam Library Folders`. Make sure to pick the one that will be default. (TODO: Put in directory names)
+
+`GOG <https://www.gog.com/galaxy>`__
+------------------------------------
+
+GOG.com is a close second to Steam because it allows aggregating all possible storefront games into one interface. So be sure to add account credentials to GOG for Steam and Epic.
+
+// TODO: flesh this out
+
+To avoid installing games to the default ``C:\`` drive, click on the Gear icon (where?) and select :menuselection:`Settings --> Installing, updating` and set the ``Game installation folder`` to ``G:\GOG``.
+
+`Epic Games <https://www.epicgames.com/store/en-US/download>`__
+---------------------------------------------------------------
+
+The only other storefront I use, and only barely, is from Epic Games. I only use it primarily to download their free game(s) of the week.
 
 *********
 Streaming
@@ -73,11 +115,6 @@ Software related specifically to streaming on Twitch
 
 ..
    Install other software
-      Steam: https://store.steampowered.com/about/
-         Steam -> Steam menu -> Settings -> Downloads -> Steam Library Folders
-      GOG Galaxy: https://www.gog.com/galaxy
-         Gear -> Settings -> Installing, updating -> Game installation folder: Set to ``G:\GOG``
-      Epic Games: https://www.epicgames.com/store/en-US/download
       Keypirinha: https://keypirinha.com/download.html
          Copy ``Keypirinha.ini`` from ``dotfiles`` repo
          Install packages
