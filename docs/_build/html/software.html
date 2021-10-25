@@ -1,72 +1,33 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>5. Software Installation &mdash; New PC Setup 1.0.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinxnotes-strike.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="4. Windows Subsystem for Linux" href="wsl.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> New PC Setup
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -74,18 +35,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="update-os.html">1. Update Operating System</a></li>
@@ -100,81 +50,66 @@
 <li class="toctree-l3"><a class="reference internal" href="#discord">5.1.4. Discord</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#everything">5.1.5. Everything</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#zip">5.1.6. 7-Zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keypirinha">5.1.7. Keypirinha</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-keypirinha-packages">5.1.7.1. Install Keypirinha Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customize-keypirinha-packages">5.1.7.2. Customize Keypirinha Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#gaming">5.2. Gaming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#streaming">5.3. Streaming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jetbrains-toolbox">5.1.8. JetBrains Toolbox:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dexpot">5.1.9. Dexpot:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#password">5.1.10. 1Password:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#picpick">5.1.11. PicPick:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sharex">5.1.12. ShareX:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker-desktop">5.1.13. Docker Desktop:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#directory-opus">5.1.14. Directory Opus:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#electric-sheep">5.1.15. Electric Sheep:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gaming">5.2. Gaming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#game-storefronts">5.2.1. Game Storefronts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#steam">5.2.1.1. Steam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gog">5.2.1.2. GOG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#epic-games">5.2.1.3. Epic Games</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#streaming">5.3. Streaming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#virtual-audio-cable">5.3.1. Virtual Audio Cable:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#voicemeeter-banana">5.3.2. VoiceMeeter Banana:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#obs">5.3.3. OBS:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">New PC Setup</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">5. </span>Software Installation</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/software.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="section" id="software-installation">
-<h1><span class="section-number">5. </span>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline"></a></h1>
 <p>With all of the most important pieces of this setup process out of the way, we can finally slow down and take our time installing various pieces of software. None of these are critical to the operation of the computer, but are necessary for my usual day-to-day tasks.</p>
 <p>To make it easier to go through this rather gargantuan list, I have divided them up into three sections:</p>
 <div class="contents local topic" id="contents">
@@ -187,27 +122,27 @@
 <p>For each of the software packages, a link to the package’s home page or download page is provided in the section title. In addition, most of the software will require signing in with the appropriate credentials. As always, <cite>1Password</cite> is our friend.</p>
 <p>Since these aren’t critical, don’t feel like they need to be installed in one day. Split them up by the three main categories, one for each day, if you like. Or just jump around the list and install them in whatever order you wish.</p>
 <div class="section" id="utilities">
-<h2><a class="toc-backref" href="#id1"><span class="section-number">5.1. </span>Utilities</a><a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1"><span class="section-number">5.1. </span>Utilities</a><a class="headerlink" href="#utilities" title="Permalink to this headline"></a></h2>
 <p>First up are the many various utility-type software that we will need to install.</p>
 <div class="section" id="vs-code">
-<h3><span class="section-number">5.1.1. </span><a class="reference external" href="https://code.visualstudio.com/">VS Code</a><a class="headerlink" href="#vs-code" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.1. </span><a class="reference external" href="https://code.visualstudio.com/">VS Code</a><a class="headerlink" href="#vs-code" title="Permalink to this headline"></a></h3>
 <p>My preferred text editor + code editor.</p>
 <p>// TODO: Add instructions for signing in with GitHub account and syncing extensions.</p>
 </div>
 <div class="section" id="dropbox">
-<h3><span class="section-number">5.1.2. </span><a class="reference external" href="https://www.dropbox.com/downloading">Dropbox</a><a class="headerlink" href="#dropbox" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.2. </span><a class="reference external" href="https://www.dropbox.com/downloading">Dropbox</a><a class="headerlink" href="#dropbox" title="Permalink to this headline"></a></h3>
 <p>We will always need the ability to keep a set of files that can be accessed anywhere.</p>
 </div>
 <div class="section" id="textexpander">
-<h3><span class="section-number">5.1.3. </span><a class="reference external" href="https://textexpander.com/download">TextExpander</a><a class="headerlink" href="#textexpander" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.3. </span><a class="reference external" href="https://textexpander.com/download">TextExpander</a><a class="headerlink" href="#textexpander" title="Permalink to this headline"></a></h3>
 <p>Very handy utility for expanding shorthand snippets into much longer strings of text.</p>
 </div>
 <div class="section" id="discord">
-<h3><span class="section-number">5.1.4. </span><a class="reference external" href="https://discord.com/">Discord</a><a class="headerlink" href="#discord" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.4. </span><a class="reference external" href="https://discord.com/">Discord</a><a class="headerlink" href="#discord" title="Permalink to this headline"></a></h3>
 <p>Social media software for keeping in touch with friends and family.</p>
 </div>
 <div class="section" id="everything">
-<h3><span class="section-number">5.1.5. </span><a class="reference external" href="https://www.voidtools.com/">Everything</a><a class="headerlink" href="#everything" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.5. </span><a class="reference external" href="https://www.voidtools.com/">Everything</a><a class="headerlink" href="#everything" title="Permalink to this headline"></a></h3>
 <p>Superior search tool to anything Microsoft can provide.</p>
 <p>During installation, make sure that it will <strong>install folder context menus</strong>. Also, if it didn’t ask about checking for updates on startup during its installation, launch it and go to <span class="menuselection">Tools ‣ Options ‣ General</span> and check the box for <span class="guilabel">Check for updates on startup</span>.</p>
 <div class="admonition note">
@@ -216,66 +151,188 @@
 </div>
 </div>
 <div class="section" id="zip">
-<h3><span class="section-number">5.1.6. </span><a class="reference external" href="https://www.7-zip.org/">7-Zip</a><a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.6. </span><a class="reference external" href="https://www.7-zip.org/">7-Zip</a><a class="headerlink" href="#zip" title="Permalink to this headline"></a></h3>
 <p>The all-in-one zip management program. I find it to be superior to WinRAR and, obviously, Windows’ built-in zip file manager.</p>
 <p>After installation, run it as admin, then go to <span class="menuselection">Tools ‣ Options ‣ System ‣ Associate 7-Zip with:</span> and click the first <span class="guilabel">+</span> button, which will make the associations for current user only.</p>
 </div>
+<div class="section" id="keypirinha">
+<h3><span class="section-number">5.1.7. </span><a class="reference external" href="https://keypirinha.com/download.html">Keypirinha</a><a class="headerlink" href="#keypirinha" title="Permalink to this headline"></a></h3>
+<p>A fantastic speed utility for launching software as well as offering many handy utilities and shortcuts. It is extensible with a wide array of plugins, all of which I use are listed below. Before getting to those, however, we need to set up Keypirinha after installing it.</p>
+<p>Once this <code class="docutils literal notranslate"><span class="pre">ansible-dotfiles</span></code> repository has been cloned and the Ansible playbook run, there will be a new home directory called <code class="file docutils literal notranslate"><span class="pre">.dotfiles</span></code>. There are several files in its <code class="file docutils literal notranslate"><span class="pre">keypirinha</span></code> directory, but we only need one for the moment. Copy <code class="file docutils literal notranslate"><span class="pre">Keypirinha.ini</span></code> from that directory to <code class="file docutils literal notranslate"><span class="pre">C:\Keypirinha\portable\Profile\User</span></code>, overwriting the existing file, if there is one.</p>
+<div class="section" id="install-keypirinha-packages">
+<h4><span class="section-number">5.1.7.1. </span>Install Keypirinha Packages<a class="headerlink" href="#install-keypirinha-packages" title="Permalink to this headline"></a></h4>
+<p>Now comes all the packages to install. The list below contains all of the plugins that I use on a regular or even irregular basis.</p>
+<p>The first part of that process is to install the <a class="reference external" href="https://github.com/ueffel/Keypirinha-PackageControl">Package Control</a> app. To do so, follow <a class="reference external" href="https://github.com/ueffel/Keypirinha-PackageControl#directly-from-keypirinha">their instructions</a>, or just press <kbd class="kbd docutils literal notranslate">F2</kbd> and paste in the following:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">keypirinha</span> <span class="nx">as</span> <span class="nx">kp</span><span class="p">,</span><span class="nx">keypirinha_net</span> <span class="nx">as</span> <span class="nx">kpn</span><span class="p">,</span><span class="nx">os</span><span class="p">;</span><span class="nx">p</span><span class="o">=</span><span class="s2">&quot;PackageControl.keypirinha-package&quot;</span><span class="p">;</span><span class="nx">d</span><span class="o">=</span><span class="nx">kpn</span><span class="p">.</span><span class="nx">build_urllib_opener</span><span class="p">().</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;https://github.com/ueffel/Keypirinha-PackageControl/releases/download/1.0.4/&quot;</span><span class="o">+</span><span class="nx">p</span><span class="p">);</span><span class="nx">pb</span><span class="o">=</span><span class="nx">d</span><span class="p">.</span><span class="nx">read</span><span class="p">();</span><span class="nx">d</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span><span class="nx">f</span><span class="o">=</span><span class="nx">open</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">kp</span><span class="p">.</span><span class="nx">installed_package_dir</span><span class="p">(),</span><span class="nx">p</span><span class="p">),</span><span class="s2">&quot;wb&quot;</span><span class="p">);</span><span class="nx">f</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">pb</span><span class="p">);</span><span class="nx">f</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>From here, you should be able to install each of the plugins by launching Keypirinha (<kbd class="kbd docutils literal notranslate">Alt</kbd> + <kbd class="kbd docutils literal notranslate">Space</kbd>) and beginning to type “Install Package”. Hit <kbd class="kbd docutils literal notranslate">Tab</kbd> and begin typing the name of the plugin, then <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ueffel/Keypirinha-Plugin-Kill">Keypirinha-Plugin-Kill</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EhsanKia/keypirinha-plugins/tree/master/keypirinha-steam">keypirinha-steam</a> (for home only)</p></li>
+<li><p><a class="reference external" href="https://github.com/AvatarHurden/keypirinha-currency">keypirinha-currency</a></p></li>
+<li><p><a class="reference external" href="https://github.com/tuteken/Keypirinha-Plugin-Ditto">Keypirinha-Plugin-Ditto</a> (requires additional setup)</p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-lipsum">keypirinha-lipsum</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-sharex">keypirinha-sharex</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ueffel/Keypirinha-WindowsApps">Keypirinha-WindowsApps</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-gitmoji">keypirinha-gitmoji</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-faker-data">keypirinha-faker-data</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-moviedb">keypirinha-moviedb</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-myip">keypirinha-myip</a></p></li>
+<li><p><a class="reference external" href="https://github.com/kvnxiao/keypirinha-winsys">keypirinha-winsys</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ueffel/Keypirinha-Time">Keypirinha-Time</a></p></li>
+<li><p><a class="reference external" href="https://github.com/DrorHarari/keypirinha-cvt">keypirinha-cvt</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-phpdocsearch">keypirinha-phpdocsearch</a> (for a dev. PC)</p></li>
+<li><p><a class="reference external" href="https://github.com/Fuhrmann/keypirinha-volumecontrol">keypirinha-volumecontrol</a></p></li>
+<li><p><a class="reference external" href="https://github.com/s-oram/keypirinha-recent_items">keypirinha-recent_items</a> (maybe)</p></li>
+<li><p><a class="reference external" href="https://github.com/DrorHarari/keypirinha-ppl">keypirinha-ppl</a> (maybe—requires additional setup)</p></li>
+<li><p>X <a class="reference external" href="https://github.com/mawiseman/keypirinha-asky">keypirinha-asky</a> (currently broken)</p></li>
+<li><p><a class="reference external" href="https://github.com/bantya/Keypirinha-EasySearch">Keypirinha-EasySearch</a> (requires additional setup)</p></li>
+<li><p><a class="reference external" href="https://github.com/bantya/Keypirinha-Zealous">Keypirinha-Zealous</a> (requires additional setup)</p></li>
+<li><p><a class="reference external" href="https://github.com/DrorHarari/keypirinha-rdp">keypirinha-rdp</a> (only if RDP is used)</p></li>
+<li><p><a class="reference external" href="https://github.com/bantya/Keypirinha-Command">Keypirinha-Command</a></p></li>
+<li><p><a class="reference external" href="https://github.com/andriykrefer/keypirinha-emojii">keypirinha-emojii</a></p></li>
+<li><p>X <a class="reference external" href="https://github.com/samusaran/keypirinha-epiclauncher">keypirinha-epiclauncher</a> (for home only) (currently broken)</p></li>
+<li><p><a class="reference external" href="https://github.com/sergix/keypirinha-stackoverflow">keypirinha-stackoverflow</a></p></li>
+<li><p><a class="reference external" href="https://github.com/clinden/keypirinha-colorpicker">keypirinha-colorpicker</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ueffel/Keypirinha-Updater">Keypirinha-Updater</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fran-f/keypirinha-git-fork">keypirinha-git-fork</a> (for future use)</p></li>
+<li><dl class="simple">
+<dt>X <a class="reference external" href="https://github.com/Torben2000/keypirinha-goggalaxy">keypirinha-goggalaxy</a> (for home only, requires additional setup) (I don’t like the icons it creates)</dt><dd><ul>
+<li><p>X Download &amp; Install <a class="reference external" href="https://storage.googleapis.com/downloads.webmproject.org/releases/webp/index.html">WebP</a> (No need for this if the ‘goggalaxy’ plugin isn’t being installed.)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>In the future, feel free to visit the <a class="reference external" href="https://ue.spdns.de/packagecontrol/">full list</a> of various packages available to see if new ones are added or if any of them are deprecated.</p>
+</div>
+<div class="section" id="customize-keypirinha-packages">
+<h4><span class="section-number">5.1.7.2. </span>Customize Keypirinha Packages<a class="headerlink" href="#customize-keypirinha-packages" title="Permalink to this headline"></a></h4>
+<p>Once the above packages are installed, some of them need a little extra setup to get working completely. Thankfully, I’ve done all that already and stored those customizations in <code class="file docutils literal notranslate"><span class="pre">~/.dotfiles/keypirinha</span></code>.</p>
+<p>Copy all of the files in that directory (except for <code class="file docutils literal notranslate"><span class="pre">Keypirinha.ini</span></code>) into <code class="file docutils literal notranslate"><span class="pre">C:\Keypirinha\portable\Profile\User</span></code>, overwriting any existing files there. That’s it!</p>
+<p>As of the writing of this document, these are the files to copy over:</p>
+<ul class="simple">
+<li><p>currency.ini</p></li>
+<li><p>cvt.ini</p></li>
+<li><p>ditto.ini</p></li>
+<li><p>easysearch.ini</p></li>
+<li><p>goggalaxy.ini</p></li>
+<li><p>Keypirinha.ini</p></li>
+<li><p>my-conversions.json</p></li>
+<li><p>zealous.ini</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="jetbrains-toolbox">
+<h3><span class="section-number">5.1.8. </span><a class="reference external" href="https://www.jetbrains.com/toolbox-app/">JetBrains Toolbox:</a><a class="headerlink" href="#jetbrains-toolbox" title="Permalink to this headline"></a></h3>
+<p>On the coding front, we’ll need this GUI for installing any JetBrains software (e.g., PhpStorm).</p>
+</div>
+<div class="section" id="dexpot">
+<h3><span class="section-number">5.1.9. </span><a class="reference external" href="https://dexpot.de/index.php?id=download">Dexpot:</a><a class="headerlink" href="#dexpot" title="Permalink to this headline"></a></h3>
+<p>I much prefer this third-party solution for managing multiple desktops over the built-in Windows desktop manager.</p>
+<p>It doesn’t have the ability to start upon login built-in, so we have to put it in the Startup folder. In either the Run dialog (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Win`</kbd>+<kbd class="kbd docutils literal notranslate">:kbd:`R</kbd></kbd>) or any File Explorer window’s address bar, type <code class="docutils literal notranslate"><span class="pre">shell:startup</span></code> to go to the folder of apps that automatically start upon login. Then create a shortcut to Dexpot in this folder.</p>
+</div>
+<div class="section" id="password">
+<h3><span class="section-number">5.1.10. </span><a class="reference external" href="https://my.1password.com/apps">1Password:</a><a class="headerlink" href="#password" title="Permalink to this headline"></a></h3>
+<p>Although it mostly runs as a browser extension, the desktop app for 1Password is necessary for quick access as well as for easier modification of entries.</p>
+</div>
+<div class="section" id="picpick">
+<h3><span class="section-number">5.1.11. </span><a class="reference external" href="https://picpick.app/en/">PicPick:</a><a class="headerlink" href="#picpick" title="Permalink to this headline"></a></h3>
+<p>Essentially a Windows equivalent to macos’ xScope, this app measures things on the screen, both in dimensions and in color. I have purchased this, so a quick search in Gmail for “picpick” should result in the license key.</p>
+</div>
+<div class="section" id="sharex">
+<h3><span class="section-number">5.1.12. </span><a class="reference external" href="https://getsharex.com/">ShareX:</a><a class="headerlink" href="#sharex" title="Permalink to this headline"></a></h3>
+<p>Indispensible utility for capturing screenshots and recordings. It is highly customizable, so take some time to make sure it is set up correctly. At a future date, I intend to see if there’s a way to export the settings so they can be imported on a separate installation. For now, though, just set things up manually in whatever way seems best.</p>
+</div>
+<div class="section" id="docker-desktop">
+<h3><span class="section-number">5.1.13. </span><a class="reference external" href="https://www.docker.com/products/docker-desktop">Docker Desktop:</a><a class="headerlink" href="#docker-desktop" title="Permalink to this headline"></a></h3>
+<p>Also a necessary tool and best installed after WSL. Typically only needed for coding.</p>
+</div>
+<div class="section" id="directory-opus">
+<h3><span class="section-number">5.1.14. </span><a class="reference external" href="https://www.gpsoft.com.au/DScripts/download.asp">Directory Opus:</a><a class="headerlink" href="#directory-opus" title="Permalink to this headline"></a></h3>
+<p>Another indispensible utility. It effectively replaces the built-in File Manager that comes with Windows and is incredibly customizable. To that end, you will most likely want to restore a previously-saved file that contains all of the settings that I prefer. Also, like <span class="xref std std-ref">PicPick</span>, it has been paid for and registered, so do a search in Gmail for “Opus” to find the certificate file attachment.</p>
+<p>// TODO: Backup filename, location, and instructions.</p>
+</div>
+<div class="section" id="electric-sheep">
+<h3><span class="section-number">5.1.15. </span><a class="reference external" href="https://electricsheep.org/#/download">Electric Sheep:</a><a class="headerlink" href="#electric-sheep" title="Permalink to this headline"></a></h3>
+<p>This is a screensaver, so it’s an optional install. That said, I do pay for this, so I’d like it to be installed everywhere I can. 😅</p>
+<p>Once it is insatlled, be sure to run it once to sign in with my paid account information. It helps to have the installer place a shortcut on the desktop rather than digging to find the executable or the “Screen Save” dialog in recent versions of Windows.</p>
+<p>When you do get into the screen saver’s settings, go to <code class="docutils literal notranslate"><span class="pre">Display</span></code> and set the <code class="docutils literal notranslate"><span class="pre">Multi</span> <span class="pre">Monitor</span> <span class="pre">Mode</span></code> to <code class="docutils literal notranslate"><span class="pre">Independent</span></code>.</p>
+</div>
 </div>
 <div class="section" id="gaming">
-<h2><a class="toc-backref" href="#id2"><span class="section-number">5.2. </span>Gaming</a><a class="headerlink" href="#gaming" title="Permalink to this headline">¶</a></h2>
-<p>Gaming platforms, stores, and even the games themselves</p>
+<h2><a class="toc-backref" href="#id2"><span class="section-number">5.2. </span>Gaming</a><a class="headerlink" href="#gaming" title="Permalink to this headline"></a></h2>
+<p>Gaming platforms, stores, and even the games themselves.</p>
+<div class="section" id="game-storefronts">
+<h3><span class="section-number">5.2.1. </span>Game Storefronts<a class="headerlink" href="#game-storefronts" title="Permalink to this headline"></a></h3>
+<p>There are only three main digital storefronts that I use currently.</p>
+<div class="section" id="steam">
+<h4><span class="section-number">5.2.1.1. </span><a class="reference external" href="https://store.steampowered.com/about/">Steam</a><a class="headerlink" href="#steam" title="Permalink to this headline"></a></h4>
+<p>The juggernaught and my “primary” store for downloading games. Even if I can find the game elsewhere for the same price, I prefer to get it here simply due to its portability. Games can often be downloaded for more OSes than just Windows with a single purchase. And now that the Steam Deck has been released, nothing else compares.</p>
+<p>// TODO: flesh this out (library locations and directory names)</p>
+<p>Once downloaded and installed, the various game libraries will need to be set up. These can be found in the app under <span class="menuselection">Steam menu ‣ Settings ‣ Downloads ‣ Steam Library Folders</span>. Make sure to pick the one that will be default. (TODO: Put in directory names)</p>
+</div>
+<div class="section" id="gog">
+<h4><span class="section-number">5.2.1.2. </span><a class="reference external" href="https://www.gog.com/galaxy">GOG</a><a class="headerlink" href="#gog" title="Permalink to this headline"></a></h4>
+<p>GOG.com is a close second to Steam because it allows aggregating all possible storefront games into one interface. So be sure to add account credentials to GOG for Steam and Epic.</p>
+<p>// TODO: flesh this out</p>
+<p>To avoid installing games to the default <code class="docutils literal notranslate"><span class="pre">C:\</span></code> drive, click on the Gear icon (where?) and select <span class="menuselection">Settings ‣ Installing, updating</span> and set the <code class="docutils literal notranslate"><span class="pre">Game</span> <span class="pre">installation</span> <span class="pre">folder</span></code> to <code class="docutils literal notranslate"><span class="pre">G:\GOG</span></code>.</p>
+</div>
+<div class="section" id="epic-games">
+<h4><span class="section-number">5.2.1.3. </span><a class="reference external" href="https://www.epicgames.com/store/en-US/download">Epic Games</a><a class="headerlink" href="#epic-games" title="Permalink to this headline"></a></h4>
+<p>The only other storefront I use, and only barely, is from Epic Games. I only use it primarily to download their free game(s) of the week.</p>
+</div>
+</div>
 </div>
 <div class="section" id="streaming">
-<h2><a class="toc-backref" href="#id3"><span class="section-number">5.3. </span>Streaming</a><a class="headerlink" href="#streaming" title="Permalink to this headline">¶</a></h2>
-<p>Software related specifically to streaming on Twitch</p>
+<h2><a class="toc-backref" href="#id3"><span class="section-number">5.3. </span>Streaming</a><a class="headerlink" href="#streaming" title="Permalink to this headline"></a></h2>
+<p>Software related specifically to streaming on Twitch.</p>
+<div class="section" id="virtual-audio-cable">
+<h3><span class="section-number">5.3.1. </span><a class="reference external" href="https://vb-audio.com/Cable/index.htm">Virtual Audio Cable:</a><a class="headerlink" href="#virtual-audio-cable" title="Permalink to this headline"></a></h3>
+<p>In order to have enough inputs and outputs for everything, we’ll need to install the Virtual Audio Cable. We can also add more later, if needed, with their A/B and C/D cable downloads. For now, though, we are probably fine with just the main cable.</p>
+</div>
+<div class="section" id="voicemeeter-banana">
+<h3><span class="section-number">5.3.2. </span><a class="reference external" href="https://vb-audio.com/Voicemeeter/banana.htm">VoiceMeeter Banana:</a><a class="headerlink" href="#voicemeeter-banana" title="Permalink to this headline"></a></h3>
+<p>Along with the <span class="xref std std-ref">Virtual Audio Cable</span>, VoiceMeeter Banana is a mixer that allows us to adjust audio from different sources individually and pipe them to different places.</p>
+<p>// TODO: Add default settings and filename+location of the settings backup. Also info on what to set various apps, such as Mumble, OBS, and even the desktop.</p>
+</div>
+<div class="section" id="obs">
+<h3><span class="section-number">5.3.3. </span><a class="reference external" href="https://obsproject.com/">OBS:</a><a class="headerlink" href="#obs" title="Permalink to this headline"></a></h3>
+<p>This big one. This program is central to all streaming and, as such, will require a great deal of settings changes to operate at full efficiency for my computer and bandwidth.</p>
+<p>// TODO: Detail those settings as well as any backup settings files.</p>
+</div>
 </div>
 </div>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="wsl.html" class="btn btn-neutral float-left" title="4. Windows Subsystem for Linux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Chris McGee.
-
-    </p>
+    <p>&#169; Copyright 2021, Chris McGee.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
