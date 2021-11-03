@@ -18,6 +18,8 @@ This one is not quite as straightforward, as Logitech makes three different soft
 
 All three software packages (and others) can be found on `the same page <https://support.logi.com/hc/en-us/articles/360024699934--Downloads-C922-Pro-Stream-Webcam>`__.
 
+.. _stream-deck-install:
+
 ***********
 Stream Deck
 ***********

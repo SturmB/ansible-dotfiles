@@ -231,6 +231,8 @@ Along with the :ref:`Virtual Audio Cable`, VoiceMeeter Banana is a mixer that al
 
 // TODO: Add default settings and filename+location of the settings backup. Also info on what to set various apps, such as Mumble, OBS, and even the desktop.
 
+.. _obs:
+
 `OBS: <https://obsproject.com/>`__
 ==================================
 
@@ -238,24 +240,31 @@ This big one. This program is central to all streaming and, as such, will requir
 
 // TODO: Detail those settings as well as any backup settings files.
 
+Stream Deck Setup
+=================
+
+The Stream Deck software itself was installed :ref:`in a previous section <stream-deck-install>`, but now we need to set it up for our needs. The first step in doing so is to restore as much as possible from a backup file.
+
+// TODO: Find the backup file in ___ and go to the Stream Deck menu HERE to install it.
+
+Now link our various social and streaming accounts with it by going to :menuselection:`Preferences --> Accounts` and adding **StreamLabs**, **Twitch**, **Twitter**, and **YouTube**.
+
+Make sure all of the buttons are set up well, starting with the OBS button. Since :ref:`OBS <obs>` is already installed, The OBS button in Stream Deck should already be set up, but just double-check it. Also make sure the Twitter button (the one that pastes in my Twitch page URL) is referencing the Twitter account we just added. For all of the OBS scene and source buttons, make sure they are pointing to the correct scenes and sources. Don't forget to check all of the multi-action buttons, too!
+
+If restoring the backup file did not also install the plugins we need, then be sure to manually install these plugins from the marketplace (?):
+
+- Philips Hue
+- VoiceMeeter Integration
+- Audio Switcher
+- OBS Tools (by BarRaider)
+- Timestamp
+
+In regards to the **OBS Tools**, we also will need to install a plugin for OBS itself to make it work. Navigate to the `**obs-websocket** releases page <https://github.com/Palakis/obs-websocket/releases>`__ and get the latest version, install it according to their instructions.
+
+// TODO: Might want to update the list of plugins and any additional instructions.
+
 ..
    Install other software
-      Stream Deck setup
-         Restore from backup file
-         Add accounts in Preferences -> Accounts
-            StreamLabs
-            Twitch
-            Twitter
-            YouTube
-         Make sure OBS button points to correct location
-         Make sure Twitter Account is correct on its button
-         Install plugins
-            Philips Hue
-            VoiceMeeter Integration
-            Audio Switcher
-            OBS Tools (BarRaider)
-               Make sure to install ``obs-websocket``: https://github.com/Palakis/obs-websocket/releases
-            Timestamp
       StreamLabels: https://streamlabs.com/dashboard#/streamlabels
          Set output directory to ``C:\Users\sturm\OneDrive\Documents\StreamLabels``
       Snaz: https://github.com/JimmyAppelt/Snaz/releases
