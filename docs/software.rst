@@ -179,6 +179,37 @@ Once it is insatlled, be sure to run it once to sign in with my paid account inf
 
 When you do get into the screen saver's settings, go to ``Display`` and set the ``Multi Monitor Mode`` to ``Independent``.
 
+`Viscosity <https://www.sparklabs.com/viscosity/>`__
+====================================================
+
+The best and most customizable way I've found so far to connect to a VPN via OpenVPN.
+
+Once installed, register it with the license that I already purchased. The license info is in Gmail; just search for "Viscosity". Then enter it in :menuselection:`Preferences --> About`.
+
+For using this with `TorGuard <https://torguard.net/>`__, we'll first need to `obtain a custom OpenVPN configuration <https://torguard.net/tgconf.php?action=vpn-openvpnconfig>`__ from them. Add the downloaded :file:`.ovpn` file to Viscosity, then use the generated username/password from TorGuard in **account settings**. If no such credentials have been created yet, go to <HERE> and generate a new set.
+
+// TODO: Is ".ovpn" correct? Need to use menuselection for "account settings"?
+
+`Adobe Creative Cloud <https://creativecloud.adobe.com/cc/>`__
+==============================================================
+
+As of this writing, I still have an "all apps" subscription to Adobe Creative Cloud. So `download the app manager <https://creativecloud.adobe.com/apps/all/desktop/pdp/creative-cloud>`__, but don't install any of the apps with it just yet.
+
+As soon as **Creative Cloud** is done installing, set the default download location to ``D:\Adobe`` before installing any apps.
+
+Then, at any point later on, download and install the `Russo One <https://fonts.google.com/specimen/Russo+One>`__ font family.
+
+// TODO: Should probably also mention (either here or under OBS) the other fonts that will be needed for the OBS streaming package we got from Nerd or Die.
+
+`Fences 3 <https://www.stardock.com/products/fences/download-trial>`__
+======================================================================
+
+I enjoy having a clean desktop, so this app helps to tidy up that easily-clogged space.
+
+.. note:: The download link is just for a trial, but it's also the full version once the Product Key has been entered. Find said Product Key on `Humble Bundle <https://www.humblebundle.com/home/library>`__
+
+After the app has been installed and registered, `copy snapshots <https://forums.joeuser.com/482026/how-to-backup-and-restore-fences>`__ (backups) from the old :file:`%APPDATA%\\Stardock\\Fences` location to the new one.
+
 ******
 Gaming
 ******
@@ -212,6 +243,8 @@ To avoid installing games to the default ``C:\`` drive, click on the Gear icon (
 ---------------------------------------------------------------
 
 The only other storefront I use, and only barely, is from Epic Games. I only use it primarily to download their free game(s) of the week.
+
+.. _streaming:
 
 *********
 Streaming
@@ -263,25 +296,42 @@ In regards to the **OBS Tools**, we also will need to install a plugin for OBS i
 
 // TODO: Might want to update the list of plugins and any additional instructions.
 
+`StreamLabels <https://streamlabs.com/dashboard#/streamlabels>`__
+=================================================================
+
+Try not to get the names of the two terms confused. **Stream*Labels*** is a desktop utility that writes information (follower count, latest subscriber name, etc.) to text files that OBS can read and display on stream. **StreamLabs** is the name of the company that develops the utility (among others).
+
+Download and install the desktop app, then set its output directory to :file:`C:\\Users\\sturm\\OneDrive\\Documents\\StreamLabels`. That's all.
+
+.. _snaz:
+
+`Snaz <https://github.com/JimmyAppelt/Snaz/releases>`__
+=======================================================
+
+This desktop app writes a coutdown timer to a text for (for OBS use) as well as currently-playing music information, among many other stream-friendly abilities.
+
+To set it up properly, refer to the text files on the Portable Apps flash drive for its settings.
+
+// TODO: Mention the two different versions and why there are two.
+
+`iTunes <https://www.microsoft.com/en-us/p/itunes/9pb2mz1zmb1s>`__
+==================================================================
+
+Although this is a music player app, I am placing it here under :ref:`streaming` because that's the only reason for using it. In order for :ref:`snaz` to render album art for the currently-playing track in OBS, iTunes must be used to play the music.
+
+Nothing fancy, just install it, drag music to the app to add songs, then create a playlist for the music.
+
+`Parsec <https://parsec.app/downloads>`__
+=========================================
+
+Needed both for gaming with friends as well as co-streaming with a friend or two.
+
+To run the app on startup, right-click task tray icon and make sure "Run when my computer starts" is checked. (`https://support.parsec.app/hc/en-us/articles/115002702331-Setting-Up-Hosting-On-Windows`__)
+
+// TODO: Verify that link above works.
+
 ..
    Install other software
-      StreamLabels: https://streamlabs.com/dashboard#/streamlabels
-         Set output directory to ``C:\Users\sturm\OneDrive\Documents\StreamLabels``
-      Snaz: https://github.com/JimmyAppelt/Snaz/releases
-         refer to text files on flash drive for settings
-      iTunes
-      Parsec
-         To run on startup, right-click task tray icon and make sure "Run when my computer starts" is checked. (https://support.parsec.app/hc/en-us/articles/115002702331-Setting-Up-Hosting-On-Windows)
-      Viscosity: https://www.sparklabs.com/viscosity/
-         License info is in Gmail; just search for "Viscosity". Enter it in Preferences -> About.
-         Get a custom OpenVPN config: https://torguard.net/tgconf.php?action=vpn-openvpnconfig
-         Use generated username/password in account settings (or generate a new set)
-      Adobe Creative Cloud: https://creativecloud.adobe.com/cc/
-         Set location to ``D:\Adobe`` before installing any apps
-         Get and install ``Russo One`` font family: https://fonts.google.com/specimen/Russo+One
-      Fences 3: https://www.stardock.com/products/fences/download-trial
-         Product Key can be found on Humble Bundle: https://www.humblebundle.com/home/library
-         Copy snapshots from old ``%APPDATA%\Stardock\Fences`` location to new: https://forums.joeuser.com/482026/how-to-backup-and-restore-fences
       TeraCopy
       MusicBrainz Picard
       Tag & Rename
