@@ -64,7 +64,7 @@ After installation, run it as admin, then go to :menuselection:`Tools --> Option
 
 A fantastic speed utility for launching software as well as offering many handy utilities and shortcuts. It is extensible with a wide array of plugins, all of which I use are listed below. Before getting to those, however, we need to set up Keypirinha after installing it.
 
-Once this ``ansible-dotfiles`` repository has been cloned and the Ansible playbook run, there will be a new home directory called :file:`.dotfiles`. There are several files in its :file:`keypirinha` directory, but we only need one for the moment. Copy :file:`Keypirinha.ini` from that directory to :file:`C:\\Keypirinha\\portable\\Profile\\User`, overwriting the existing file, if there is one.
+Once this ``ansible-dotfiles`` repository has been cloned and the Ansible playbook run, there will be a new home directory called :file:`dotfiles`. There are several files in its :file:`keypirinha` directory, but we only need one for the moment. Copy :file:`Keypirinha.ini` from that directory to :file:`C:\\Keypirinha\\portable\\Profile\\User`, overwriting the existing file, if there is one.
 
 Install Keypirinha Packages
 ---------------------------
@@ -116,7 +116,7 @@ In the future, feel free to visit the `full list <https://ue.spdns.de/packagecon
 Customize Keypirinha Packages
 -----------------------------
 
-Once the above packages are installed, some of them need a little extra setup to get working completely. Thankfully, I've done all that already and stored those customizations in :file:`~/.dotfiles/keypirinha`.
+Once the above packages are installed, some of them need a little extra setup to get working completely. Thankfully, I've done all that already and stored those customizations in :file:`~/dotfiles/keypirinha`.
 
 Copy all of the files in that directory (except for :file:`Keypirinha.ini`) into :file:`C:\\Keypirinha\\portable\\Profile\\User`, overwriting any existing files there. That's it!
 

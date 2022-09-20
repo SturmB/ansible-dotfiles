@@ -142,7 +142,7 @@
       ansible.builtin.include_role:
         name: geerlingguy.dotfiles
       loop:
-        - dest: "~/.dotfiles"
+        - dest: "~/dotfiles"
           home: "~"
           files:
             - .aliases
@@ -151,11 +151,11 @@
             - .p10k.zsh
             - .tmux.conf
             - .zshrc.local
-        - dest: "~/.dotfiles"
+        - dest: "~/dotfiles"
           home: "/mnt/c/Users/christopher.mcgee/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
           files:
             - settings.json
-        - dest: "~/.dotfiles"
+        - dest: "~/dotfiles"
           home: "/mnt/c/Keypirinha/portable/Profile/User"
           files:
             - currency.ini
