@@ -38,16 +38,13 @@
           - bat
           - php-gd
           - php-zip
-          - php7.4-gd
-          - php7.4-zip
-          - php7.4-cli
           - tree
       become: yes
 
   tasks:
     - name: Ensure lsd is installed
       ansible.builtin.apt:
-        deb: https://github.com/Peltoche/lsd/releases/download/0.22.1/lsd_0.22.0_amd64.deb
+        deb: https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
       become: yes
 
     - name: Ensure Ruby and gems are installed
