@@ -39,6 +39,7 @@
           - php-gd
           - php-zip
           - tree
+          - nala
       become: yes
 
   tasks:
