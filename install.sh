@@ -81,6 +81,13 @@ if [ ! "$(which pip3)" ]; then
     fi
 fi
 
+title "Ensure ondrej/php repository is installed"
+if [[ $LIKE == 'debian' ]]; then
+    sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+else
+    sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+fi
+
 title "Ensure Ansible is installed"
 if [ ! -f "$HOME/.local/bin/ansible" ]; then
     if [[ $LIKE == 'debian' ]]; then

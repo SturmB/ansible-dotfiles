@@ -36,9 +36,13 @@
           - figlet
           - neofetch
           - bat
+          - php
           - php-gd
           - php-zip
+          - php-xml
+          - php-curl
           - tree
+          - nnn
       become: yes
 
   tasks:
