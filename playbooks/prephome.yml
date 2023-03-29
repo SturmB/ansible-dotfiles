@@ -43,6 +43,8 @@
           - php-curl
           - tree
           - nnn
+          - nala
+          - net-tools
       become: yes
 
   tasks:

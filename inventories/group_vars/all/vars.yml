@@ -2,7 +2,7 @@
 # misc
 github_access_token: "{{ vault_github_access_token }}"
 new_user: "{{ ansible_user }}"
-wsl_name: "{{ ansible_env.WSL_DISTRO_NAME is defined | ternary('@' + (ansible_env.WSL_DISTRO_NAME | lower), '') }}"
+wsl_name: "{{ '@' + (ansible_env['WSL_DISTRO_NAME'] | lower) if 'WSL_DISTRO_NAME' in ansible_env else '' }}"
 ssh_key_comment: "{{ ansible_user_id }}{{ wsl_name }}@{{ ansible_hostname | lower }}"
 nvs_home: "/home/{{ new_user }}/.nvs"
 
