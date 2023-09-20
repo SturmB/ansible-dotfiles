@@ -41,6 +41,8 @@
           - php-zip
           - php-xml
           - php-curl
+          - php-mysql
+          - php-mbstring
           - tree
           - nnn
           - nala
