@@ -86,10 +86,10 @@ From here, you should be able to install each of the plugins by launching Keypir
 * `keypirinha-lipsum <https://github.com/Fuhrmann/keypirinha-lipsum>`__
 * `keypirinha-sharex <https://github.com/Fuhrmann/keypirinha-sharex>`__
 * `Keypirinha-WindowsApps <https://github.com/ueffel/Keypirinha-WindowsApps>`__
-* `keypirinha-gitmoji <https://github.com/Fuhrmann/keypirinha-gitmoji>`__
+* `keypirinha-gitmoji-next <https://github.com/grandsilence/keypirinha-gitmoji-next>`__
 * `keypirinha-faker-data <https://github.com/Fuhrmann/keypirinha-faker-data>`__
 * `keypirinha-moviedb <https://github.com/Fuhrmann/keypirinha-moviedb>`__
-* `keypirinha-myip <https://github.com/Fuhrmann/keypirinha-myip>`__
+* `keypirinha-myipextended <https://github.com/andriykrefer/Keypirinha-MyIpExtended>`__
 * `keypirinha-winsys <https://github.com/kvnxiao/keypirinha-winsys>`__
 * `Keypirinha-Time <https://github.com/ueffel/Keypirinha-Time>`__
 * `keypirinha-cvt <https://github.com/DrorHarari/keypirinha-cvt>`__
