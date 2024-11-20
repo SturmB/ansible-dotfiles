@@ -81,6 +81,19 @@ if [ ! "$(which pip3)" ]; then
     fi
 fi
 
+title "Ensure PIPX is installed"
+if [ ! "$(which pipx)" ]; then
+    if [[ $LIKE == 'debian' ]]; then
+        sudo apt update
+        sudo apt install -y pipx
+        sudo apt-mark auto pipx
+    else
+        sudo apt update
+        sudo apt install -y pipx
+        sudo apt-mark auto pipx
+    fi
+fi
+
 title "Ensure ondrej/php repository is installed"
 if [[ $LIKE == 'debian' ]]; then
     sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
@@ -91,7 +104,7 @@ fi
 title "Ensure Ansible is installed"
 if [ ! -f "$HOME/.local/bin/ansible" ]; then
     if [[ $LIKE == 'debian' ]]; then
-        pip3 install --user ansible
+        pipx install --user ansible
     else
         pip3 install --user ansible
     fi
