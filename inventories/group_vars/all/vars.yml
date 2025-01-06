@@ -3,7 +3,7 @@
 github_access_token: "{{ vault_github_access_token }}"
 new_user: "{{ ansible_user }}"
 wsl_name: "{{ '@' + (ansible_env['WSL_DISTRO_NAME'] | lower) if 'WSL_DISTRO_NAME' in ansible_env else '' }}"
-ssh_key_comment: "{{ ansible_user_id }}{{ wsl_name }}@{{ ansible_hostname | lower }}"
+ssh_key_comment: "sturm@ubuntu@enterprise" # TODO: Investigate why the variable version wasn't working (claming the same content of the key was already on GitHub).
 nvs_home: "/home/{{ new_user }}/.nvs"
 
 # weareinteractive.users
