@@ -86,10 +86,12 @@ if [ ! "$(which pipx)" ]; then
     if [[ $LIKE == 'debian' ]]; then
         sudo apt update
         sudo apt install -y pipx
+        sudo apt install -y ansible-core
         sudo apt-mark auto pipx
     else
         sudo apt update
         sudo apt install -y pipx
+        sudo apt install -y ansible-core
         sudo apt-mark auto pipx
     fi
 fi
@@ -104,7 +106,7 @@ fi
 title "Ensure Ansible is installed"
 if [ ! -f "$HOME/.local/bin/ansible" ]; then
     if [[ $LIKE == 'debian' ]]; then
-        pipx install --user ansible
+        pipx install ansible
     else
         pip3 install --user ansible
     fi
