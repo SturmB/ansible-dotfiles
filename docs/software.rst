@@ -210,6 +210,21 @@ I enjoy having a clean desktop, so this app helps to tidy up that easily-clogged
 
 After the app has been installed and registered, `copy snapshots <https://forums.joeuser.com/482026/how-to-backup-and-restore-fences>`__ (backups) from the old :file:`%APPDATA%\\Stardock\\Fences` location to the new one.
 
+`PathLengthChecker <https://github.com/deadlydog/PathLengthChecker>`__
+======================================================================
+
+This is a handy utility for checking the length of file paths in Windows. It's necessary for when I have music to upload to a server that has a 180-character limit on file paths.
+
+`Affinity Suite <https://affinity.serif.com/en-us/>`__
+======================================================
+
+This is a suite of apps that I use for graphic design. I have purchased all three apps, so the license keys can be found in Gmail by searching for "Affinity". The keys probably won't be needed since the apps will ask for login credentials.
+
+`DaVinci Resolve <https://www.blackmagicdesign.com/products/davinciresolve/>`__
+===============================================================================
+
+This is a video editing suite that I have been using for a while now. It's free for personal use.
+
 ******
 Gaming
 ******
