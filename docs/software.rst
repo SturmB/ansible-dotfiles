@@ -225,6 +225,16 @@ This is a suite of apps that I use for graphic design. I have purchased all thre
 
 This is a video editing suite that I have been using for a while now. It's free for personal use.
 
+`MediaInfo <https://mediaarea.net/en/MediaInfo>`__
+==================================================
+
+This is a handy utility for viewing information about audio and video files.
+
+`OhMyPosh <https://ohmyposh.dev/>`__
+====================================
+
+This is a PowerShell prompt theme engine.
+
 ******
 Gaming
 ******
